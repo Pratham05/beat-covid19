@@ -1,6 +1,6 @@
-# BEAT COVID19
+# BEAT COVID-19
 A website intended to provide useful information about the coronavirus pandemic in Australia. It includes the following:
-* Description of the desease
+* Description of the disease
 * Known Symptoms
 * Precautionary measures 
 * Live report of world cases
@@ -13,7 +13,7 @@ To install the application on your local machine use npm with the following comm
 ```
 npm install
 ```
-### Running the project
+### Running this amazing project
 The project can be run using the following command
 ```
 npm run start
