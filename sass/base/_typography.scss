@@ -1,0 +1,30 @@
+body {
+    font-family: "Raleway", Arial, Helvetica,sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-text-primary;
+}
+
+.heading-primary {
+    font-size: 9rem;
+    color: $color-text-primary;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 1rem;
+
+    span {
+        display: inline-block;
+        color: $color-white;
+        padding: 0 2.5rem;
+        background-color: $color-primary;
+        border-radius: 2px;
+    }
+}
+
+.paragraph {
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+

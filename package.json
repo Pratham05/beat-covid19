@@ -4,7 +4,7 @@
   "description": "website for coronavirus awareness",
   "main": "index.js",
   "scripts": {
-    "watch:css" : "node-sass sass/main.scss css/style.css -w",
+    "watch:sass" : "node-sass sass/main.scss css/style.css -w",
     "start:server": "live-server",
     "start": "npm-run-all --parallel watch:sass start:server",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
@@ -22,7 +22,7 @@
     "scss",
     "javaScript"
   ],
-  "author": "pratham",
+  "author": "Pratham05",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Pratham05/beat-covid19/issues"

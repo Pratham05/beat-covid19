@@ -1,0 +1,19 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom: .3rem solid rgba($color-primary, .3);
+        //margin-right: auto;
+        transition: all .2s ease-in-out;
+        font-weight: 500;
+    }
+
+    &:hover,
+    &:active {
+        border-bottom: .3rem solid rgba($color-primary, 1);
+    }
+    
+}

@@ -1,0 +1,34 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+////////This file contains styles for Resetting the basic Browser Defaults
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+// Define root font-size for the application
+html {
+    font-size: 62.5%; // Translates to 10px - Selected for easy calculation
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-white;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+a:link,
+a:visited,
+a {
+    text-decoration: none;
+    color: $color-text-primary;
+}
