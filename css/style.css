@@ -33,9 +33,14 @@ body {
 .heading-primary {
   font-size: 8rem;
   color: #373A40;
-  line-height: 1.3;
+  line-height: 1;
   font-weight: 500;
   margin-bottom: 1rem; }
+  .heading-primary--1 {
+    animation: moveInLeft 1s; }
+  .heading-primary--2 {
+    animation: moveInBottom .5s ease-out 1s;
+    animation-fill-mode: backwards; }
   .heading-primary span {
     display: inline-block;
     color: #EFEBE0;
@@ -50,6 +55,36 @@ body {
   width: 88%;
   margin: auto;
   background-color: inherit; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  80% {
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 @keyframes bounce {
   0%, 20%, 60%, 100% {
@@ -99,6 +134,36 @@ body {
   width: 88%;
   margin: auto;
   background-color: inherit; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  80% {
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 @keyframes bounce {
   0%, 20%, 60%, 100% {
@@ -176,7 +241,7 @@ body {
 
 .card {
   display: block;
-  height: 55vh;
+  height: auto;
   background-color: rgba(239, 235, 224, 0.6);
   padding: 2rem;
   width: 85%;
@@ -287,7 +352,12 @@ body {
   .hero__paragraph {
     font-size: 1.4rem;
     color: rgba(55, 58, 64, 0.8);
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    animation: moveInBottom .4s ease-out 2s;
+    animation-fill-mode: backwards; }
+  .hero__btn {
+    animation: moveInBottom .4s ease-out 2s;
+    animation-fill-mode: backwards; }
 
 .section-how {
   background-image: linear-gradient(to right bottom, rgba(0, 109, 112, 0.8), rgba(0, 182, 188, 0.8)), url("../../img/corona-bg-1.jpg");
@@ -303,7 +373,7 @@ body {
     font-size: 5rem;
     letter-spacing: .4rem; }
   .section-how__praragraph {
-    color: #EFEBE0; }
+    color: rgba(239, 235, 224, 0.8); }
   .section-how__btn:link, .section-how__btn:visited, .section-how__btn {
     margin-top: 5rem;
     color: #EFEBE0;
