@@ -1,83 +1,96 @@
+// .hero {
+//     height: 100vh;
+    
+//     &__text {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: flex-start;
+//     } 
+
+//     &__paragraph {
+//         text-align: justify;
+//         font-weight: 300;
+//     }
+//     &__img {
+//         height: 100%;
+//         width: 100%;
+//         animation: bounce 4s infinite linear;
+//     }
+// }
+
 .hero {
-    height: 100vh;
+    height: 90vh;
+    display: flex;
+    padding-top: 4rem;
+    align-items: center;
+    padding-bottom: 0;
+
     &__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    } 
+        //flex: 1;
+        flex-basis: 45%;
+    }
+
+
+    &__img {
+        //flex: 2;
+        
+        //width: 100%;
+        flex-basis: 55%;
+        height: auto;
+
+
+        // align-self: flex-end;
+        animation: bounce  6s infinite;
+        // background-image: url("../../img/hero_test2.svg");
+        // background-size: 50vw 70vh;
+        // background-repeat: no-repeat;
+    }
 
     &__paragraph {
-        text-align: justify;
-        font-weight: 300;
-    }
-    //animation: bounce  6s infinite;
-    &__img {
-        position: relative;
-        height: 70vh;
-        &--c1 {
-            position: absolute;
-            left: 15rem;
-            top: 20rem;
-            height: 15rem;
-            width: 15rem;
-            z-index: 88888;
-            animation: rotate-180 5s infinite;
-        }
-       
-        &--c2 {
-            position: absolute;
-            left: 0;
-            top: 8rem;
-            height: 10rem;
-            width: 10rem;
-            z-index: 88888;
-            animation: move-dia1 5s infinite forwards;
-        }
-
-        &--c3 {
-            position: absolute;
-            left: 5rem;
-            top: 35rem;
-            height: 8rem;
-            width: 8rem;
-            z-index: 88888;
-            animation: move-dia2 5s infinite forwards;
-            animation: name duration timing-function delay iteration-count direction fill-mode;
-        }
-
-        &--h1 {
-            position: absolute;
-            top: 0;
-            right: -20rem;
-            height: 80vh;
-            width: 40vw;
-            animation: bounce 4s infinite;
-        }
+        font-size: 1.4rem;
+        color: rgba($color: $color-black, $alpha: .8);
+        margin-top: 3rem;
     }
 }
 
-.how-to{
-    height: 100vh;
-    background-color: #EFEBE0;
+.section-how{
+    background-image: linear-gradient(to right bottom,
+                                    rgba($color-primary-dark, 0.8),
+                                    rgba($color-primary, 0.8)),
+    url("../../img/corona-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 5rem 0;
+
+    &__heading {
+        display: inline-block;
+        color: $color-white;
+        letter-spacing: 2px;
+        font-size: 5rem;
+    }
+
+    &__praragraph {
+        color: $color-white;
+    }
+
+    &__btn:link,
+    &__btn:visited,
+    &__btn{
+        margin-top: 5rem;
+        color: $color-white;
+        border-color: rgba($color: $color-black, $alpha: .6);
+    }
+
+    &__btn:hover {
+        border-color: rgba($color: $color-black, $alpha: 1);
+    }
 }
 
-.about-covid{
-    height: 100vh;
-    background-color: #373A40;
+.section-about {
+    height: 1000px;
+    background-color: $color-white;
 }
 
-.symptoms{
-    height: 100vh;
-    background-color: #A1DBF1;
-}
-
-.world-report{
-    height: 100vh;
-    background-color: #A1DBF1;
-}
-
-.get-tested{
-    height: 100vh;
-    background-color: #373A40;
-}

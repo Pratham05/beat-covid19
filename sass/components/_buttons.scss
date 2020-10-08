@@ -5,15 +5,41 @@
         display: inline-block;
         text-transform: uppercase;
         text-align: center;
-        border-bottom: .3rem solid rgba($color-primary, .3);
-        //margin-right: auto;
         transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+
+    &--redirect,
+    &--redirect:link,
+    &--redirect:visited {
+        border-bottom: .3rem solid rgba($color-primary, .3);
         font-weight: 500;
     }
 
-    &:hover,
-    &:active {
+    &--redirect:hover,
+    &--redirect:active {
         border-bottom: .3rem solid rgba($color-primary, 1);
     }
-    
+
+    &--primary,
+    &--primary:link,
+    &--primary:visited {
+        color: $color-white;
+        background-color: $color-primary;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+    }
+
+    &--primary:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+
+    &--primary:active,
+    &--primary:focus {
+        outline: none;
+        transform: translateY(-.1rem);
+        // # in rgba works only with scss
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
 }

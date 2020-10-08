@@ -13,21 +13,41 @@
         justify-content: space-between;
         height: 100%;
         align-items: center;
+        align-content: center;
     }
 
-    &__logo-link,
-    &__logo-link:link,
-    &__logo-link:visited,
-    &__logo-link:active {
-        text-decoration: none;
-        color: $color-primary;
-        font-size: 2.5rem;
-        font-weight: 700;
+    &__logo {
+
+        &--link,
+        &--link:link,
+        &--link:visited,
+        &--link:active {
+            text-decoration: none;
+            color: $color-primary;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        &--img {
+            width: 20rem;
+        }
     }
+
 
     &__list {        
         display: flex;
         list-style: none;
+    }
+
+    &__link {
+        color: rgba($color-black, .8) ;
+        border-bottom: 3px solid transparent;
+        transition: all .4s ease-in-out;
+    }
+
+    &__link:hover {
+        color: rgba($color: $color-black, $alpha: 1);
+        border-bottom: 3px solid rgba($color: $color-primary, $alpha: .8);
     }
 
     &__item {

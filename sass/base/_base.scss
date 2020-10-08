@@ -14,6 +14,7 @@
 // Define root font-size for the application
 html {
     font-size: 62.5%; // Translates to 10px - Selected for easy calculation
+    scroll-behavior: smooth;
 }
 
 body {
