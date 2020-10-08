@@ -32,6 +32,16 @@ body {
     }
 }
 
+
+.heading-secondary--white {
+    display: inline-block;
+    color: $color-white;
+    letter-spacing: .2rem;
+    font-size: 5rem;
+    letter-spacing: .4rem;
+    margin-bottom: 3rem;
+}
+
 .paragraph {
     &:not(:last-child) {
         margin-bottom: 3rem;

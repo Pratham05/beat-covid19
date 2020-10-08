@@ -48,6 +48,14 @@ body {
     background-color: #00B6BC;
     border-radius: 2px; }
 
+.heading-secondary--white {
+  display: inline-block;
+  color: #EFEBE0;
+  letter-spacing: .2rem;
+  font-size: 5rem;
+  letter-spacing: .4rem;
+  margin-bottom: 3rem; }
+
 .paragraph:not(:last-child) {
   margin-bottom: 3rem; }
 
@@ -281,6 +289,27 @@ body {
     transform: translateY(-0.5rem) scale(1.03);
     font-weight: 500; }
 
+.card-2 {
+  margin: 0 auto;
+  background-color: #EFEBE0;
+  text-align: center;
+  width: 95%;
+  border-radius: .3rem;
+  box-shadow: 0 1rem 4rem rgba(121, 121, 121, 0.15);
+  transition: transform .3s; }
+  .card-2__icon {
+    font-size: 5rem;
+    background-image: linear-gradient(to right, rgba(55, 58, 64, 0.7), #373a40);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .card-2__lower-section {
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    color: #EFEBE0;
+    background-color: #797979; }
+  .card-2:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
 .navigation {
   height: 10vh;
   box-shadow: 0 0.1rem 0.8rem rgba(55, 58, 64, 0.2);
@@ -346,6 +375,7 @@ body {
   .hero__text {
     flex-basis: 45%; }
   .hero__img {
+    width: 55%;
     flex-basis: 55%;
     height: auto;
     animation: bounce  6s infinite; }
@@ -360,19 +390,14 @@ body {
     animation-fill-mode: backwards; }
 
 .section-how {
-  background-image: linear-gradient(to right bottom, rgba(0, 109, 112, 0.8), rgba(0, 182, 188, 0.8)), url("../../img/corona-bg-1.jpg");
+  background-image: linear-gradient(to right bottom, rgba(0, 109, 112, 0.7), #00b6bc), url("../../img/corona-bg-1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
   padding: 5rem 0; }
-  .section-how__heading {
-    display: inline-block;
-    color: #EFEBE0;
-    letter-spacing: .2rem;
-    font-size: 5rem;
-    letter-spacing: .4rem; }
   .section-how__praragraph {
+    margin-top: -3rem;
     color: rgba(239, 235, 224, 0.8); }
   .section-how__btn:link, .section-how__btn:visited, .section-how__btn {
     margin-top: 5rem;
@@ -382,17 +407,22 @@ body {
     border-color: #373a40; }
 
 .section-about {
-  height: 50rem;
+  height: auto;
   background-color: #EFEBE0;
   text-align: center; }
   .section-about__left {
-    height: 50rem;
+    height: 55rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column; }
   .section-about__img {
+    margin-top: 5rem;
     width: 100%;
+    height: 100%;
+    background-image: url("../../img/corona-bg-2.svg");
+    background-position: center;
+    background-size: cover;
     border: 4rem solid #373A40;
     border-radius: .5rem; }
   .section-about__heading {
@@ -402,4 +432,12 @@ body {
     margin: 5rem 0 2rem 0;
     letter-spacing: .2rem; }
   .section-about__btn:link, .section-about__btn:visited, .section-about__btn {
+    margin: 5rem 0; }
+
+.section-symptoms {
+  padding: 4rem 0;
+  text-align: center;
+  background-image: linear-gradient(to right bottom, rgba(55, 58, 64, 0.8), #373a40); }
+  .section-symptoms__btn:link, .section-symptoms__btn:visited, .section-symptoms__btn {
+    color: #EFEBE0;
     margin: 5rem 0; }

@@ -18,9 +18,17 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-hand-wash:before{content:'\0042';}
-.icon-stay-home:before{content:'\0043';}
-.icon-wear-mask:before{content:'\0044';}
-.icon-get-tested:before{content:'\0045';}
-.icon-cough:before{content:'\0049';}
-.icon-social-distancing:before{content:'\004a';}
+.icon-cough-normal:before{content:'\0041';}
+.icon-diarrhea:before{content:'\0042';}
+.icon-difficulty-breathing:before{content:'\0043';}
+.icon-fever:before{content:'\0044';}
+.icon-headache:before{content:'\0045';}
+.icon-sore-throat:before{content:'\0046';}
+.icon-tiredness:before{content:'\0047';}
+.icon-vomiting:before{content:'\0048';}
+.icon-hand-wash:before{content:'\0049';}
+.icon-stay-home:before{content:'\004a';}
+.icon-wear-mask:before{content:'\004b';}
+.icon-get-tested:before{content:'\004c';}
+.icon-cough:before{content:'\004d';}
+.icon-social-distancing:before{content:'\004e';}
