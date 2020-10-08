@@ -2,10 +2,10 @@
     height: 10vh;;
     //border-bottom: 1px solid rgba($color: $color-black, $alpha: 0);
     box-shadow: 0 .1rem .8rem rgba($color-black, .2);
-    // position: fixed;
-    // top: 0;
-    // width: 100%;
-    // z-index: 99999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
     background-color: $color-white;
 
     &__nav {

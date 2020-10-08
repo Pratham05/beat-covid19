@@ -1,0 +1,17 @@
+.tile {
+    background-color: $color-white;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 1rem 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
+    text-align: justify;
+    transition: transform .3s ease-in-out;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &:hover {
+        transform: translateY(-.5rem) scale(1.03);
+        font-weight: 500;
+    }
+}

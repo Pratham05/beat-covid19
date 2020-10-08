@@ -58,7 +58,7 @@
     background-image: linear-gradient(to right bottom,
                                     rgba($color-primary-dark, 0.8),
                                     rgba($color-primary, 0.8)),
-    url("../../img/corona-bg.jpg");
+    url("../../img/corona-bg-1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -68,8 +68,9 @@
     &__heading {
         display: inline-block;
         color: $color-white;
-        letter-spacing: 2px;
+        letter-spacing: .2rem;
         font-size: 5rem;
+        letter-spacing: .4rem;
     }
 
     &__praragraph {
@@ -82,6 +83,7 @@
         margin-top: 5rem;
         color: $color-white;
         border-color: rgba($color: $color-black, $alpha: .6);
+
     }
 
     &__btn:hover {
@@ -90,7 +92,39 @@
 }
 
 .section-about {
-    height: 1000px;
+    height: 50rem;
     background-color: $color-white;
+
+    &__left {
+        height: 50rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 100%;
+        border: 4rem solid $color-black;
+        border-radius: .5rem;
+    }
+
+    &__heading {
+        color: $color-black;
+        font-weight: 500;
+        font-size: 3rem;
+        margin: 5rem 0 2rem 0;
+        letter-spacing: .2rem;
+    }
+    
+    text-align: center;
+
+    &__btn:link,
+    &__btn:visited,
+    &__btn{
+        margin: 5rem 0;
+    }
+    
 }
+
 

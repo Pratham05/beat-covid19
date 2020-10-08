@@ -7,8 +7,9 @@
 
 .row {
     display: flex;
-    align-items: center;
-    align-content: center;
+    align-items: flex-start;
+    //align-content: center;
+    align-content: flex-start;
     flex-wrap: no-wrap;
 
     &:not(:last-child) {

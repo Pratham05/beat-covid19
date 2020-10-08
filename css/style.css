@@ -152,6 +152,7 @@ body {
   cursor: pointer; }
 
 .btn--redirect, .btn--redirect:link, .btn--redirect:visited {
+  font-size: 3rem;
   border-bottom: 0.3rem solid rgba(0, 182, 188, 0.3);
   font-weight: 500; }
 
@@ -202,9 +203,26 @@ body {
   .card__btn {
     margin-top: 5rem; }
 
+.tile {
+  background-color: #EFEBE0;
+  padding: 1rem;
+  border-radius: .5rem;
+  box-shadow: 1rem 1.5rem 4rem rgba(55, 58, 64, 0.15);
+  text-align: justify;
+  transition: transform .3s ease-in-out; }
+  .tile:not(:last-child) {
+    margin-bottom: 2rem; }
+  .tile:hover {
+    transform: translateY(-0.5rem) scale(1.03);
+    font-weight: 500; }
+
 .navigation {
   height: 10vh;
   box-shadow: 0 0.1rem 0.8rem rgba(55, 58, 64, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
   background-color: #EFEBE0; }
   .navigation__nav {
     display: flex;
@@ -239,8 +257,8 @@ body {
 
 .row {
   display: flex;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
   flex-wrap: no-wrap; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -272,7 +290,7 @@ body {
     margin-top: 3rem; }
 
 .section-how {
-  background-image: linear-gradient(to right bottom, rgba(0, 109, 112, 0.8), rgba(0, 182, 188, 0.8)), url("../../img/corona-bg.jpg");
+  background-image: linear-gradient(to right bottom, rgba(0, 109, 112, 0.8), rgba(0, 182, 188, 0.8)), url("../../img/corona-bg-1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -281,8 +299,9 @@ body {
   .section-how__heading {
     display: inline-block;
     color: #EFEBE0;
-    letter-spacing: 2px;
-    font-size: 5rem; }
+    letter-spacing: .2rem;
+    font-size: 5rem;
+    letter-spacing: .4rem; }
   .section-how__praragraph {
     color: #EFEBE0; }
   .section-how__btn:link, .section-how__btn:visited, .section-how__btn {
@@ -293,5 +312,24 @@ body {
     border-color: #373a40; }
 
 .section-about {
-  height: 1000px;
-  background-color: #EFEBE0; }
+  height: 50rem;
+  background-color: #EFEBE0;
+  text-align: center; }
+  .section-about__left {
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .section-about__img {
+    width: 100%;
+    border: 4rem solid #373A40;
+    border-radius: .5rem; }
+  .section-about__heading {
+    color: #373A40;
+    font-weight: 500;
+    font-size: 3rem;
+    margin: 5rem 0 2rem 0;
+    letter-spacing: .2rem; }
+  .section-about__btn:link, .section-about__btn:visited, .section-about__btn {
+    margin: 5rem 0; }
