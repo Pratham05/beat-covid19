@@ -9,17 +9,32 @@
         cursor: pointer;
     }
 
-    &--redirect,
-    &--redirect:link,
-    &--redirect:visited {
+    &--redirect--black,
+    &--redirect--black:link,
+    &--redirect--black:visited {
+        color: $color-black;
         font-size: 3rem;
         border-bottom: .3rem solid rgba($color-primary, .3);
         font-weight: 500;
     }
 
-    &--redirect:hover,
-    &--redirect:active {
-        border-bottom: .3rem solid rgba($color-primary, 1);
+    &--redirect--black:hover,
+    &--redirect--black:active {
+        border-bottom: .3rem solid rgba($color-primary, .8);
+    }
+
+    &--redirect--white,
+    &--redirect--white:link,
+    &--redirect--white:visited {
+        color: $color-white;
+        font-size: 3rem;
+        border-bottom: .3rem solid rgba($color-black, .5);
+        font-weight: 500;
+    }
+
+    &--redirect--white:hover,
+    &--redirect--white:active {
+        border-bottom: .3rem solid rgba($color-black, 1);
     }
 
     &--primary,

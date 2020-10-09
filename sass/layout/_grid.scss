@@ -7,10 +7,10 @@
 
 .row {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     //align-content: center;
-    align-content: flex-start;
-    flex-wrap: no-wrap;
+    //align-content: stretch;
+    //flex-wrap: no-wrap;
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;

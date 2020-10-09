@@ -1,0 +1,50 @@
+.author {
+    text-align: center;
+    &__shape {
+        margin: 0 auto;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 100%;
+        background-image: url("../../img/author-avatar.png");
+        background-size: contain;
+        border: 1px solid darken($color: $color-black, $amount: 1.5);
+    }
+
+    &__heading {
+        color: $color-primary-dark;
+        font-weight: 500;
+        font-size: 2rem;
+        letter-spacing: .2rem;
+        line-height: 1.8;
+    }
+
+    &__desc {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    &__icons {
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 3.5rem;
+        justify-content: center;
+
+        &--1,
+        &--2 {
+            display: inline-block;
+            padding: .5rem;
+            transition: all .3s;
+        }
+        
+        &--1:hover,
+        &--2:hover {
+            color: $color-primary-dark;
+            transform: scale(1.2);
+        }
+    }
+
+    a {
+        color: white;
+    }
+}
+

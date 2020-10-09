@@ -42,6 +42,14 @@ body {
     margin-bottom: 3rem;
 }
 
+.heading-secondary--black {
+    display: inline-block;
+    color: $color-black;
+    letter-spacing: .2rem;
+    font-size: 3rem;
+    letter-spacing: .4rem;
+    margin-bottom: 3rem;
+}
 .paragraph {
     &:not(:last-child) {
         margin-bottom: 3rem;
