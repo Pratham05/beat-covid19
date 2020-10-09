@@ -18,6 +18,12 @@
         font-weight: 500;
     }
 
+    &--redirect--black--2,
+    &--redirect--black--2:link,
+    &--redirect--black--2:visited {
+        color: $color-white;
+    }
+
     &--redirect--black:hover,
     &--redirect--black:active {
         border-bottom: .3rem solid rgba($color-primary, .8);

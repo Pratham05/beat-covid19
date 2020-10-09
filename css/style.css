@@ -274,6 +274,9 @@ body {
   border-bottom: 0.3rem solid rgba(0, 182, 188, 0.3);
   font-weight: 500; }
 
+.btn--redirect--black--2, .btn--redirect--black--2:link, .btn--redirect--black--2:visited {
+  color: #EFEBE0; }
+
 .btn--redirect--black:hover, .btn--redirect--black:active {
   border-bottom: 0.3rem solid rgba(0, 182, 188, 0.8); }
 
@@ -404,6 +407,55 @@ body {
   .author a {
     color: white; }
 
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500000;
+  transition: all .3s;
+  opacity: 0;
+  visibility: hidden; }
+  @supports (-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
+    .modal {
+      -webkit-backdrop-filter: blur(1rem);
+      backdrop-filter: blur(1rem);
+      background-color: rgba(55, 58, 64, 0.3); } }
+  .modal__content {
+    position: relative;
+    background-color: #EFEBE0;
+    width: 60vw;
+    height: 60vh;
+    visibility: 0;
+    opacity: 0;
+    border-radius: .2rem;
+    box-shadow: 0 2rem 4rem rgba(55, 58, 64, 0.2);
+    transform: scale(0.5);
+    overflow: hidden; }
+  .modal__close:link, .modal__close:visited {
+    display: inline-block;
+    color: #373A40;
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    transition: all .2s; }
+  .modal__close:hover {
+    color: #006D70; }
+  .modal:target {
+    visibility: visible;
+    opacity: 1; }
+  .modal:target .modal__content {
+    opacity: 1;
+    transform: scale(1);
+    visibility: 1; }
+
 .navigation {
   height: 10vh;
   box-shadow: 0 0.1rem 0.8rem rgba(55, 58, 64, 0.2);
@@ -461,7 +513,7 @@ body {
 .footer {
   background-color: #373A40;
   color: #EFEBE0;
-  padding: 5rem 0;
+  padding-top: 5rem;
   font-weight: 300; }
   .footer__info {
     border-right: 1px solid #006D70;
@@ -478,7 +530,8 @@ body {
     margin: 3rem 0;
     border: 1px solid #006D70; }
   .footer__copyright {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem; }
   .footer__disclaimer {
     text-align: center;
     font-size: 1.2rem;
@@ -514,6 +567,9 @@ body {
       transform: translateX(3rem); }
     .footer__list__item a {
       color: #EFEBE0; }
+  .footer__bottom {
+    padding: 1.5rem;
+    background-color: #006D70; }
 
 .hero {
   height: 90vh;
@@ -583,4 +639,4 @@ body {
 
 .section-world-report {
   text-align: center;
-  padding: 4rem 0; }
+  padding: 6rem 0; }

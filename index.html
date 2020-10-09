@@ -20,10 +20,10 @@
                 </div>
     
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="" class="navigation__link">How ?</a></li>
-                    <li class="navigation__item"><a href="#about-covid" class="navigation__link">About Covid</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Symptoms</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">World Report</a></li>
+                    <li class="navigation__item"><a href="#section-how" class="navigation__link">How ?</a></li>
+                    <li class="navigation__item"><a href="#section-about" class="navigation__link">About Covid</a></li>
+                    <li class="navigation__item"><a href="#section-symptoms" class="navigation__link">Symptoms</a></li>
+                    <li class="navigation__item"><a href="#section-world-report" class="navigation__link">World Report</a></li>
                 </ul>
             </nav>
         </div>
@@ -72,7 +72,7 @@
     </header>
 
     <main class="main-content">
-        <section class="section-how">
+        <section class="section-how" id="section-how">
             <h2 class="heading-secondary--white">
                 How to Beat Covid?
             </h2>
@@ -90,7 +90,7 @@
                             <p class="card__text card__text--desc">
                                 Wash your hands as frequently as possible
                             </p>
-                            <a href="" class="btn btn--primary card__btn">learn how to</a>
+                            <a href="#modal" class="btn btn--primary card__btn">learn how to</a>
                         </div>
                     </div>
                     <div class="col-1-of-3">
@@ -102,7 +102,7 @@
                             <p class="card__text card__text--desc">
                                 When outside, stay atleast 1.5m apart 
                             </p>
-                            <a href="" class="btn btn--primary card__btn">learn why</a>
+                            <a href="#modal" class="btn btn--primary card__btn">learn why</a>
                         </div>
                     </div>
                     <div class="col-1-of-3">
@@ -114,7 +114,7 @@
                             <p class="card__text card__text--desc">
                                 Wear a mask when physical distancing is not possible
                             </p>
-                            <a href="" class="btn btn--primary card__btn">learn how to</a>
+                            <a href="#modal" class="btn btn--primary card__btn">learn how to</a>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                             <p class="card__text card__text--desc">
                                 Cough only into your elbow to avoid spreading of germs
                             </p>
-                            <a href="" class="btn btn--primary card__btn">learn how to</a>
+                            <a href="#modal" class="btn btn--primary card__btn">learn how to</a>
                         </div>
                     </div>
                     <div class="col-1-of-3">
@@ -140,7 +140,7 @@
                             <p class="card__text card__text--desc">
                                 Stay at home as much as possible
                             </p>
-                            <a href="" class="btn btn--primary card__btn">learn why</a>
+                            <a href="#modal" class="btn btn--primary card__btn">learn why</a>
                         </div>
                     </div>
                     <div class="col-1-of-3">
@@ -152,14 +152,14 @@
                             <p class="card__text card__text--desc">
                                 If you feel any symptom, get tested and isolate yourself
                             </p>
-                            <a href="" class="btn btn--primary card__btn">learn how to</a>
+                            <a href="#modal" class="btn btn--primary card__btn">learn how to</a>
                         </div>
                     </div>
                 </div>
             </div>
             <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" class="btn btn--redirect--white u-margin-top-medium" target="blank">Learn More &rarr;</a>    
         </section>
-        <section class="section-about" >
+        <section class="section-about" id="section-about">
             <div class="u-container">
                 <div class="row">
                     <div class="col-1-of-2 section-about__left">
@@ -192,7 +192,7 @@
             <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" class="btn btn--redirect--black u-margin-top-medium" target="blank">Learn More &rarr;</a>
         </section>
 
-        <section class="section-symptoms">
+        <section class="section-symptoms" id="section-symptoms">
 
             <h2 class="heading-secondary--white">
                 Symptoms of Covid19
@@ -269,10 +269,10 @@
                     </div>
                 </div>
             </div> 
-            <a href="https://www.healthdirect.gov.au/coronavirus-covid-19-symptoms-and-how-the-virus-spreads-faqs" class="btn btn--redirect--white u-margin-top-medium" target="blank">Learn More &rarr;</a>
+            <a href="https://www.healthdirect.gov.au/coronavirus-covid-19-symptoms-and-how-the-virus-spreads-faqs" class="btn btn--redirect--black btn--redirect--black--2 u-margin-top-medium" target="blank">Learn More &rarr;</a>
         </section>
 
-        <section class="section-world-report">
+        <section class="section-world-report" id="section-world-report">
             <div class="u-container">
                 <h2 class="heading-secondary--black">
                     The World is Facing an Alarming Situation with Cases Increasing Everyday!
@@ -421,14 +421,23 @@
                     </div>
                 </div>
             </div>
-            <hr class="footer__partition">
-            <div class="footer__bottom">
+            <!-- <hr class="footer__partition"> -->
+            
+        </div>
+        <div class="footer__bottom">
+            <div class="u-container">
                 <p class="footer__disclaimer">Disclaimer - All the information available on this website has been gathered from trusted health awareness websites. The visitor must however verify the information from multiple trusted sources as guidelines in such a pandemic are subject to change frequently</p>
             </div>
         </div>
-        
-        
     </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            Hello G
+            <a href="#section-how" class="modal__close">&times;</a>
+        </div> 
+    </div>
+
     <script src="js/scroll.js"></script>
 </body>
 </html>
