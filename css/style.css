@@ -369,9 +369,11 @@ body {
     text-transform: uppercase;
     padding: 1rem 1rem;
     color: #EFEBE0;
-    background-image: linear-gradient(to right, #00B6BC, #006D70); }
-  .card-2:hover {
-    transform: translateY(-1.5rem) scale(1.03); }
+    background-image: linear-gradient(to right, #00B6BC, #006D70);
+    transition: all 10s ease-in-out;
+    height: 5rem; }
+  .card-2__upper-section {
+    transition: all 10s ease-in-out; }
 
 .author {
   text-align: center; }
@@ -598,6 +600,9 @@ body {
   background-image: linear-gradient(to right bottom, rgba(0, 109, 112, 0.7), #00b6bc), url("../../img/corona-bg-1.jpg");
   background-size: cover;
   background-position: center;
+  backface-visibility: hidden;
+  background-attachment: fixed;
+  -webkit-background-attachment: fixed;
   background-repeat: no-repeat;
   text-align: center;
   padding: 5rem 0; }

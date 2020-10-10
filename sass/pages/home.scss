@@ -70,6 +70,9 @@
     url("../../img/corona-bg-1.jpg");
     background-size: cover;
     background-position: center;
+    backface-visibility: hidden;
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
     padding: 5rem 0;
