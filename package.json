@@ -4,9 +4,10 @@
   "description": "website for coronavirus awareness",
   "main": "index.js",
   "scripts": {
+    "build:js": "watchify js_modules/main.js -o js/bundle.js",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "start:server": "live-server",
-    "start": "npm-run-all --parallel watch:sass start:server",
+    "start": "npm-run-all --parallel watch:sass start:server build:js",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
@@ -37,7 +38,8 @@
     "live-server": "^1.2.1",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.1.1"
+    "postcss": "^8.1.1",
+    "watchify": "^3.11.1"
   },
   "browserslist": [
     "defaults"
