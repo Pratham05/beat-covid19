@@ -27,3 +27,10 @@
 .u-margin-bottom-small {
     margin-top: 3rem;
 }
+
+.u-inactive {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    // opacity animates and visibility prevents functionality of any leftovers
+}

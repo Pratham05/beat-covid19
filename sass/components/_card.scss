@@ -13,10 +13,14 @@
     &__icon {
         font-size: 10rem;
         display: inline-block;
-        background-image: linear-gradient(to right, $color-primary-dark, $color-primary);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+        color: $color-primary-dark;
+        z-index: 2;
+        @supports(-webkit-background-clip: text) {
+            background-image: linear-gradient(to right, $color-primary-dark, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
     }
 
     &__text {

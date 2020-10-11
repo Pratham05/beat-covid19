@@ -5,8 +5,18 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 99999;
+    z-index: 100;
     background-color: $color-white;
+    transition: all .4s ease-in-out;
+
+    // Class used to hide or make navigation bar visible
+    // Is added or removed using JS
+    &__inactive {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        // opacity animates and visibility prevents functionality of any leftovers
+    }
 
     &__nav {
         display: flex;

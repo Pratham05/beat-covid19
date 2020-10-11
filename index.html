@@ -34,12 +34,10 @@
                         Be a Hero 
                     </h1>
                     <h1 class="heading-primary heading-primary--2">
-                        Wear a <span>Mask</span> 
+                        <div class="heading-primary__changing-text">Wear a Mask</div>
                     </h1>
-                    <p class="paragraph hero__paragraph">
-                        According to the latest advice issued by Australian health professionals, wearing
-                        a mask helps to protect not only you but also to those around you in an area
-                        of community transmission, and where physical distancing is immpossible.
+                    <p class="paragraph heading-primary__paragraph">
+                        The outbreak of Covid-19 has thrown an unprecedented challenge to the world. It demands us to stand together and fight the challenge
                     </p>
                     <a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/how-to-protect-yourself-and-others-from-coronavirus-covid-19/masks" class="btn  btn--redirect--black hero__btn" target="blank">Learn More &rarr;</a>
                 </div>
@@ -277,98 +275,103 @@
         <section class="section-world-report" id="section-world-report">
             <div class="u-container">
                 <h2 class="heading-secondary--black">
-                    The World is Facing an Alarming Situation with Cases Increasing Everyday!
+                    World Cases Report
                 </h2>
-                <div class="row">
-                    <div class="col-1-of-2">
-                        <img src="img/world-corona.png" alt="world coronavirus" class="section-world-report__img">
-                    </div>
-                    <div class="col-1-of-2">
-                        <div class="row">
-                            <div class="col-1-of-2">
-                                <h3 class="heading-tertiary">
-                                    Total Cases
-                                </h3>
-                                <h2 class="heading-secndary">
-                                    8,693,005
-                                </h2>
-                            </div>
-
-                            <div class="col-1-of-2">
-                                <h3 class="heading-tertiary">
-                                    RECOVERED
-                                </h3>
-                                <h2 class="heading-secndary">
-                                    8,693,005
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1-of-2">
-                                <h3 class="heading-tertiary">
-                                    Deaths
-                                </h3>
-                                <h2 class="heading-secndary">
-                                    8,693,005
-                                </h2>
-                            </div>
-
-                            <div class="col-1-of-2">
-                                <h3 class="heading-tertiary">
-                                    Active Cases
-                                </h3>
-                                <h2 class="heading-secndary">
-                                    8,693,005
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
+                <div class="section-world-report__loader">
+                    &nbsp;
                 </div>
-                <div class="row">
-                    <div class="col-1-of-2">
-                        <h2>Check What's happening in your country</h2>
-                        <select name="countries" id="countries">
-                            <option value="australia">Australia</option>
-                        </select>
-                    </div>
-
-                    <div class="col-1-of-2" style="margin-left: 25rem;">
-                        <div class="row">
-                            <div class="col-1-of-2">
-                                <h3 class="heading-tertiary">
-                                    Total Cases
-                                </h3>
-                                <h2 class="heading-secndary">
-                                    8,693,005
-                                </h2>
+                <div class="world-data-report u-inactive" id="world-data-report">
+                    <div class="row">
+                        <div class="col-1-of-2">
+                            <img src="img/world-corona.png" alt="world coronavirus" class="section-world-report__img">
+                        </div>
+                        <div class="col-1-of-2">
+                            <div class="row">
+                                <div class="col-1-of-2">
+                                    <h3 class="heading-tertiary">
+                                        Total Cases
+                                    </h3>
+                                    <h2 class="heading-secndary">
+                                        <span id="total__cases">%Total%</span>
+                                    </h2>
+                                </div>
+    
+                                <div class="col-1-of-2">
+                                    <h3 class="heading-tertiary">
+                                        Recovered
+                                    </h3>
+                                    <h2 class="heading-secndary">
+                                        <span id="recovered__cases">%Recovered%</span>
+                                    </h2>
+                                </div>
                             </div>
-
-                            <div class="col-1-of-2">
-                                <h3 class="heading-tertiary">
-                                    RECOVERED
-                                </h3>
-                                <h2 class="heading-secndary">
-                                    8,693,005
-                                </h2>
+                            <div class="row">
+                                <div class="col-1-of-2">
+                                    <h3 class="heading-tertiary">
+                                        Deaths
+                                    </h3>
+                                    <h2 class="heading-secndary">
+                                        <span id="total__deaths">%Deaths%</span>
+                                    </h2>
+                                </div>
+    
+                                <div class="col-1-of-2">
+                                    <h3 class="heading-tertiary">
+                                        Active Cases
+                                    </h3>
+                                    <h2 class="heading-secndary">
+                                        <span id="active__cases">%Cases%</span>
+                                    </h2>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-1-of-2">
-                                <h3 class="heading-tertiary">
-                                    Deaths
-                                </h3>
-                                <h2 class="heading-secndary">
-                                    8,693,005
-                                </h2>
+                    </div>
+                    <div class="row" id="country-data">
+                        <div class="col-1-of-2">
+                            <h2>Check What's happening in your country</h2>
+                            <select name="countries" id="countries">
+                                <option value="australia">Australia</option>
+                            </select>
+                        </div>
+    
+                        <div class="col-1-of-2" style="margin-left: 25rem;">
+                            <div class="row">
+                                <div class="col-1-of-2">
+                                    <h3 class="heading-tertiary">
+                                        Total Cases
+                                    </h3>
+                                    <h2 class="heading-secndary">
+                                        8,693,005
+                                    </h2>
+                                </div>
+    
+                                <div class="col-1-of-2">
+                                    <h3 class="heading-tertiary">
+                                        Recovered
+                                    </h3>
+                                    <h2 class="heading-secndary">
+                                        8,693,005
+                                    </h2>
+                                </div>
                             </div>
-
-                            <div class="col-1-of-2">
-                                <h3 class="heading-tertiary">
-                                    Active Cases
-                                </h3>
-                                <h2 class="heading-secndary">
-                                    8,693,005
-                                </h2>
+                            <div class="row">
+                                <div class="col-1-of-2">
+                                    <h3 class="heading-tertiary">
+                                        Deaths
+                                    </h3>
+                                    <h2 class="heading-secndary">
+                                        8,693,005
+                                    </h2>
+                                </div>
+    
+                                <div class="col-1-of-2">
+                                    <h3 class="heading-tertiary">
+                                        Active Cases
+                                    </h3>
+                                    <h2 class="heading-secndary">
+                                        8,693,005
+                                    </h2>
+                                </div>
                             </div>
                         </div>
                     </div>
