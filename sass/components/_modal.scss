@@ -20,12 +20,13 @@
     &__content {
         position: relative;
         background-color: $color-white;
-        width: 60vw;
-        height: 60vh;
+        // width: 60vw;
+        // height: 60vh;
+        padding: 5rem;
         visibility: 0;
         opacity: 0;
         border-radius: .2rem;
-        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        box-shadow: 0 2rem 4rem rgba($color-black, .5);
         transform: scale(.5);
         overflow: hidden;
     }

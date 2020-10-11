@@ -57,6 +57,7 @@ body {
   margin-bottom: 3rem; }
 
 .heading-secondary--black {
+  font-weight: 500;
   display: inline-block;
   color: #373A40;
   letter-spacing: .2rem;
@@ -431,12 +432,11 @@ body {
   .modal__content {
     position: relative;
     background-color: #EFEBE0;
-    width: 60vw;
-    height: 60vh;
+    padding: 5rem;
     visibility: 0;
     opacity: 0;
     border-radius: .2rem;
-    box-shadow: 0 2rem 4rem rgba(55, 58, 64, 0.2);
+    box-shadow: 0 2rem 4rem rgba(55, 58, 64, 0.5);
     transform: scale(0.5);
     overflow: hidden; }
   .modal__close:link, .modal__close:visited {

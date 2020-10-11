@@ -1,10 +1,5 @@
+// Import Statements
+const modalHandler = require("./modalHandler");
 
-
-let inserter = require("./modalInjector.js");
-
-
-inserter();
-
-document.querySelector(".modal__close").addEventListener(onclick, function () {
-    console.log("clicked");
-  });
+// Add Modal Handler 
+modalHandler();
