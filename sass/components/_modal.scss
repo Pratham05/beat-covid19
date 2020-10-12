@@ -36,6 +36,10 @@
         transition: all .2s ease-in-out;
     }
 
+    &__background-remove {
+        background-image: url("");
+    }
+
     &__video {
         margin-top: 2rem;
     }

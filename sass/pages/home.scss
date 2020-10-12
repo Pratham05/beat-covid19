@@ -15,13 +15,7 @@
         // flex basis not working in safari
         flex-basis: 55%;
         height: auto;
-
-
-        // align-self: flex-end;
         animation: bounce  6s infinite;
-        // background-image: url("../../img/hero_test2.svg");
-        // background-size: 50vw 70vh;
-        // background-repeat: no-repeat;
     }
 
     &__btn {
@@ -42,17 +36,16 @@
     -webkit-background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
-    padding: 5rem 0;
+    padding: 6rem 0;
 
     &__praragraph {
         color: white;
         font-weight: 300;
-        margin-top: -3rem;
+        margin-top: -4rem;
     }
 }
 
 .section-about {
-    padding: 5rem 0;
     height: auto;
     background-color: $color-white;
     text-align: center;
@@ -74,14 +67,12 @@
 }
 
 .section-symptoms {
-    padding: 5rem 0;
     text-align: center;
     background-color: $color-black;
 }
 
 .section-world-report {
     text-align: center;
-    padding: 5rem 0;
 
     &__left {
         // For fixing the alignment
@@ -96,7 +87,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 2.5rem;
         color: $color-black;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     &__select-input {
@@ -108,7 +99,7 @@
         width: 80%;
         height: 5rem;
         margin: 0 auto;
-        font-weight: 400;
+        font-weight: 300;
         color: $color-black;
         border: 1px solid $color-primary;
         border-radius: .2rem;
@@ -123,6 +114,8 @@
     &__loader {
         width: 100%;
         height: 10rem;
+        // Prevents blank space bellow footer coz of less height
+        margin-bottom: auto;
         text-align: center;
         font-size: 1.8rem;
         font-weight: 300;

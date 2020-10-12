@@ -28,9 +28,12 @@ const modalHandler = () => {
   // Set Event Listeners
 
   // For closing the modal and removing the button on backdrop click
-  document.querySelector(".modal").addEventListener("click", _ => {
-    removeVideo();
-    window.location.href = '#section-how';
+  document.querySelector(".modal").addEventListener("click", event => {
+    // Ensuring close only on modal click down and not its children like modal__content
+    if (event.target.classList.value === "modal") {
+      removeVideo();
+      window.location.href = '#section-how';
+    }
   });
 
   // For removing the video when the cross button is clicked
@@ -42,6 +45,7 @@ const modalHandler = () => {
   document.querySelectorAll(".card__btn").forEach((btn) => {
     btn.addEventListener("click", event => {
       // Extract button identifier
+      removeVideo();
       const identifier = event.target.classList[event.target.classList.length -1].split('--')[1];
       // Add corresponding video using the video object
       document.querySelector(".modal__video").insertAdjacentHTML("beforeend", videoHandler[identifier]);

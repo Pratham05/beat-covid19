@@ -13,6 +13,9 @@ body {
   box-sizing: border-box;
   background-color: #EFEBE0; }
 
+section {
+  padding: 8rem 0; }
+
 ::selection {
   background-color: #00B6BC;
   color: #EFEBE0; }
@@ -25,7 +28,7 @@ a {
 
 body {
   font-family: "Raleway", Arial, Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #373A40; }
@@ -434,6 +437,7 @@ body {
     height: 0;
     visibility: hidden; }
   .symptom-card:hover .symptom-card__lower-section {
+    border-radius: .3rem;
     height: 30vh; }
 
 .author {
@@ -464,9 +468,8 @@ body {
       display: inline-block;
       padding: .5rem;
       transition: all .3s; }
-    .author__icons--1:hover, .author__icons--2:hover {
-      color: #006D70;
-      transform: scale(1.2); }
+      .author__icons--1:hover, .author__icons--2:hover {
+        transform: scale(1.2); }
   .author a {
     color: #EFEBE0; }
 
@@ -504,6 +507,8 @@ body {
     transform: scale(0.5);
     overflow: hidden;
     transition: all .2s ease-in-out; }
+  .modal__background-remove {
+    background-image: url(""); }
   .modal__video {
     margin-top: 2rem; }
   .modal__close:link, .modal__close:visited {
@@ -676,14 +681,13 @@ body {
   -webkit-background-attachment: fixed;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 5rem 0; }
+  padding: 6rem 0; }
   .section-how__praragraph {
     color: white;
     font-weight: 300;
-    margin-top: -3rem; }
+    margin-top: -4rem; }
 
 .section-about {
-  padding: 5rem 0;
   height: auto;
   background-color: #EFEBE0;
   text-align: center; }
@@ -700,13 +704,11 @@ body {
     border-radius: .5rem; }
 
 .section-symptoms {
-  padding: 5rem 0;
   text-align: center;
   background-color: #373A40; }
 
 .section-world-report {
-  text-align: center;
-  padding: 5rem 0; }
+  text-align: center; }
   .section-world-report__left {
     width: 50vw; }
   .section-world-report__lower {
@@ -715,7 +717,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
     color: #373A40;
-    font-weight: 400; }
+    font-weight: 300; }
   .section-world-report__select-input {
     display: block;
     background-color: #E4F4F3;
@@ -725,7 +727,7 @@ body {
     width: 80%;
     height: 5rem;
     margin: 0 auto;
-    font-weight: 400;
+    font-weight: 300;
     color: #373A40;
     border: 1px solid #00B6BC;
     border-radius: .2rem;
@@ -736,6 +738,7 @@ body {
   .section-world-report__loader {
     width: 100%;
     height: 10rem;
+    margin-bottom: auto;
     text-align: center;
     font-size: 1.8rem;
     font-weight: 300;
