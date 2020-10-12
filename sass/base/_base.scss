@@ -1,5 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////
-////////This file contains styles for Resetting the basic Browser Defaults
+//////// This file contains styles for Resetting the basic Browser Defaults
+//////// and adding basic functionalities
 //////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -22,6 +23,7 @@ body {
     background-color: $color-white;
 }
 
+// Setting uniform spacing for all sections
 section {
     padding: 8rem 0;
 }
