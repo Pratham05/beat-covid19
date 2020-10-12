@@ -9,8 +9,26 @@
     align-items: center;
     padding-bottom: 0;
 
+    @include respond(tab-port) { // width < 900
+        height: 60vh;
+        justify-content: center;
+    }
+
+    @include respond(phone) { // width < 600
+        height: 55vh;
+    }
+
     &__text {
         flex-basis: 45%;
+        @include respond(tab-port) { // width < 900
+            margin-top: 15rem;
+            width: 100%;
+            flex-basis: 100%;
+        }
+
+        @include respond(phone) { // width < 600
+            margin-top: 5rem;
+        }
     }
 
 
@@ -20,6 +38,10 @@
         flex-basis: 55%;
         height: auto;
         animation: bounce  6s infinite;
+
+        @include respond(tab-port) { // width < 900
+            display: none;
+         }
     }
 
     &__btn {
@@ -43,9 +65,13 @@
     padding: 6rem 0;
 
     &__praragraph {
-        color: white;
+        color: $color-white;
         font-weight: 300;
         margin-top: -4rem;
+
+        @include respond(phone) { // width < 600
+            margin-top: -2rem;
+        }
     }
 }
 
@@ -56,6 +82,10 @@
 
     &__left {
         height: 55rem;
+
+        @include respond(tab-port) { // width < 900
+            display: none;
+         }
     }
     // Changed this to div for giving background image
     &__img {
@@ -78,9 +108,38 @@
 .section-world-report {
     text-align: center;
 
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child) {
+            margin-bottom: $gutter-vertical;
+        }
+    }
+
+    &__col {
+        &:not(:first-child) {
+            margin-left: $gutter-horizontal;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        @include respond(tab-port) { // width < 900
+            display: none;
+        }
+    }
+
     &__left {
         // For fixing the alignment
-        width: 50vw;
+        width: 45vw;
+
+        @include respond(tab-land) { // width < 1200
+            width: 35vw;
+        }
+
+        @include respond(tab-port) { // width < 900
+            width: 100%;
+        }
     }
 
     &__lower {

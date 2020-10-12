@@ -1,5 +1,11 @@
 //////////////////////////////////////////////////////////////////////////////////////////
-////////This file contains the different functionalities required to be included
+//////// This file contains the different functionalities required to be included
+//////// 1. center content - Centers the content of the class applied in
+//////// 2. Media Query manager for applying media queries
+//////// 0 - 600px:      Phone
+//////// 600 - 900px:    Tablet Potrait
+//////// 900px - 1200px: Tablet Landscape
+//////// [> 1200] normal styles - Desktop first
 //////////////////////////////////////////////////////////////////////////////////////////
 
 @mixin center-content {
@@ -8,3 +14,22 @@
     justify-content: center;
     flex-direction: column;
 }
+
+// Media Query Manager
+// ems are most suitable for supporting zooms thus have been used
+// for media queries
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content} ; // 600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content }; // 900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content }; //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content }; // 1800px
+    }
+}
+

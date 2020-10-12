@@ -7,8 +7,12 @@ body {
     font-family: "Raleway", Arial, Helvetica,sans-serif;
     font-weight: 300;
     font-size: 1.6rem;
-    line-height: 1.7;
+    line-height: 1.5;
     color: $color-text-primary;
+
+    @include respond(phone) { // width < 600
+        font-size: 1.2rem;
+    }
 }
 
 .heading-primary {
@@ -17,6 +21,14 @@ body {
     line-height: 1;
     font-weight: 500;
     margin-bottom: 2rem;  
+
+    @include respond(tab-land) { // width < 1200
+        font-size: 6rem;
+    }
+
+    @include respond(phone) { // width < 600
+        font-size: 5rem;
+    }
 
     &--1 {
         animation: moveInLeft .8s;
@@ -34,6 +46,12 @@ body {
         height: 8rem;
         width: 100%;
         transition: all .4s ease-in-out;
+        @include respond(tab-land) { // width < 1200
+            height: 6rem;
+        }
+        @include respond(phone) { // width < 600
+            height: 5rem;
+        }
     }
 
     &__paragraph {
@@ -45,6 +63,10 @@ body {
         animation-fill-mode: backwards;
         text-align: justify;
         padding-right: 5rem;
+
+        @include respond(phone) { // width < 600
+            font-size: 1rem;
+        }
     }
 
     span {
@@ -66,6 +88,10 @@ body {
     margin-bottom: 3rem;
     text-transform: capitalize;
 
+    @include respond(phone) { // width < 900
+        font-size: 3rem;
+    }
+
     &--white {
         color: $color-white;
     }
@@ -79,6 +105,10 @@ body {
     font-weight: 400;
     font-size: 3rem;
     letter-spacing: .2rem;
+
+    @include respond(phone) { // width < 900
+        font-size: 2rem;
+    }
 
     &--primary {
         color: $color-primary-dark

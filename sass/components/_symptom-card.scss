@@ -8,9 +8,12 @@
     justify-content: space-between;
     margin: 0 auto;
     background-color: $color-white;
-    height: 30vh;
+    //height: 3vw;
     text-align: center;
     width: 100%;
+    @include respond(tab-port) { // width < 900
+        width: 60%;
+    }
     border-radius: .3rem;
     box-shadow: 0 2rem 2rem rgba($color-black, $alpha: .3);
     transition: transform .3s;
@@ -26,7 +29,7 @@
     }
 
     &__upper-section {
-        height: 25vh;
+        height: 20rem;
         transition: all .5s ease-in-out;
     }
 
@@ -51,7 +54,7 @@
     }
 
     &:hover &__lower-section--information {
-        height: 25vh;
+        height: 15rem;
         transition: height .5s ease-in;    
     }
 
@@ -62,7 +65,7 @@
 
     &:hover &__lower-section {
         border-radius: .3rem;
-        height: 30vh;
+        height: 25rem;
     }
 
 }

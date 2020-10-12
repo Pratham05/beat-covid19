@@ -16,6 +16,13 @@
 html {
     font-size: 62.5%; // Translates to 10px - Selected for easy calculation
     scroll-behavior: smooth;
+    @include respond(tab-land) { // width < 1200
+        font-size: 56.25%; // 9px
+    }
+
+    @include respond(tab-port) { // width < 900
+        font-size: 50%; // 8px
+    }
 }
 
 body {

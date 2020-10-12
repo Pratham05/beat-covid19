@@ -9,8 +9,14 @@
     display: flex;
     align-items: stretch;
     //align-content: center;
-    //align-content: stretch;
     //flex-wrap: no-wrap;
+    // @include respond(tab-port) { // width < 900
+    //     font-size: 50%; // 8px
+    // }
+
+    @include respond(tab-port) { // width < 900
+        display: block;
+    }
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
@@ -19,8 +25,14 @@
     [class^="col-"] {
         &:not(:first-child) {
             margin-left: $gutter-horizontal;
+            @include respond(tab-port) { // width < 900
+                margin-left: 0;
+            }
         }
         flex: 1;
+        @include respond(tab-port) { // width < 900
+            margin-bottom: $gutter-vertical;
+        }
     }
 
     .col-2-of-3, 
