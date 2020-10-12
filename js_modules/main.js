@@ -6,13 +6,18 @@
 // Import Statements
 const modalHandler = require("./modalHandler");
 const addCountries = require("./countryOptionHandler");
-const scrollEffectHandler = require("./effectsHandler");
+const scrollEffectHandler = require("./effectsHandler").scrollEffectHandler;
+const changingTextEffectHandler = require("./effectsHandler").changingTextEffectHandler;
 const updateData = require("./fetchDataHandler");
 
 // Add Modal Handler 
 modalHandler();
 
+// Add Scroll Handler
 scrollEffectHandler();
+
+// Add Changing Text Handler
+changingTextEffectHandler();
 
 // Add Countries to option list
 addCountries();

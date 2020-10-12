@@ -12,27 +12,36 @@
     &--redirect--black,
     &--redirect--black:link,
     &--redirect--black:visited {
-        color: $color-black;
+        color: rgba($color: $color-black, $alpha: .8);
         font-size: 3rem;
         border-bottom: .3rem solid rgba($color-primary, .3);
         font-weight: 500;
     }
 
+    &--redirect--black:hover,
+    &--redirect--black:active {
+        color: rgba($color: $color-black, $alpha: 1);
+        border-bottom: .3rem solid rgba($color-primary, .8);
+    }
+
     &--redirect--black--2,
     &--redirect--black--2:link,
     &--redirect--black--2:visited {
-        color: $color-white;
+        color: rgba($color: $color-white, $alpha: .8);
     }
 
-    &--redirect--black:hover,
-    &--redirect--black:active {
+    &--redirect--black--2:hover,
+    &--redirect--black--2:active {
+        color: rgba($color: $color-white, $alpha: 1);
         border-bottom: .3rem solid rgba($color-primary, .8);
     }
+
+    
 
     &--redirect--white,
     &--redirect--white:link,
     &--redirect--white:visited {
-        color: $color-white;
+        color: rgba($color: $color-white, $alpha: .8);
         font-size: 3rem;
         border-bottom: .3rem solid rgba($color-black, .5);
         font-weight: 500;
@@ -40,6 +49,7 @@
 
     &--redirect--white:hover,
     &--redirect--white:active {
+        color: rgba($color: $color-white, $alpha: 1);
         border-bottom: .3rem solid rgba($color-black, 1);
     }
 

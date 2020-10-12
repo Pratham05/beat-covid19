@@ -11,8 +11,8 @@
     }
 
     &__heading {
-        color: $color-primary-dark;
-        font-weight: 500;
+        color: $color-white;
+        font-weight: 300;
         font-size: 2rem;
         letter-spacing: .2rem;
         line-height: 1.8;
@@ -20,7 +20,7 @@
 
     &__desc {
         font-size: 1.3rem;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     &__icons {
@@ -44,7 +44,7 @@
     }
 
     a {
-        color: white;
+        color: $color-white;
     }
 }
 

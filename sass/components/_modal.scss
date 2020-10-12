@@ -7,6 +7,7 @@
     left: 0;
     z-index: 500000;
     transition: all .3s;
+    text-align: center;
 
     @supports(-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
         -webkit-backdrop-filter: blur(1rem);
@@ -33,6 +34,10 @@
         transform: scale(.5);
         overflow: hidden;
         transition: all .2s ease-in-out;
+    }
+
+    &__video {
+        margin-top: 2rem;
     }
 
     &__close {

@@ -4,15 +4,10 @@
     padding-top: 5rem;
     font-weight: 300;
 
-    // &__main{
-    //    width: 30vw;
-    //    margin-right: 4rem;
-    // }
-
     &__info {
-        border-right: 1px solid  $color-primary-dark;
-        border-left: 1px solid $color-primary-dark;
-        padding-left: 4.5rem;
+        border-right: 2px solid  lighten($color: $color-black, $amount: 4);
+        border-left: 2px solid  lighten($color: $color-black, $amount: 4);
+        padding-left: 9rem;
     }
 
     &__logo--img {
@@ -20,19 +15,26 @@
     }
 
     &__quote {
+        text-transform: capitalize;;
         text-align: justify;
-        margin: 2rem 0;
+        font-size: 2rem;
         font-weight: 300;
-        font-size: 1.4rem;
+        letter-spacing: .2rem;
+        margin-top: 2rem;
+
+        &__desc {
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
     }
 
     &__partition {
         margin: 3rem 0;
-        border: 1px solid $color-primary-dark;
+        //border: 1px solid $color-primary-dark;
     }
 
     &__copyright {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-bottom: 1.5rem;
     }
 
@@ -43,8 +45,8 @@
     }
 
     &__heading {
-        color: $color-primary-dark;
-        font-weight: 500;
+        color: $color-white;
+        font-weight: 300;
         font-size: 2rem;
         letter-spacing: .2rem;
         line-height: 1.8;
@@ -53,7 +55,7 @@
 
     &__list {
         list-style: none;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         &:not(:last-child) {
             margin-bottom: 2.5rem;
         }
@@ -71,7 +73,7 @@
 			top: .8rem;
 			height: .8rem;
 			width: .8rem;
-			border: .1rem solid $color-primary-dark;
+			border: .1rem solid $color-white;
 			border-width: .2rem .2rem 0 0;
             transform: rotate(45deg);
             
@@ -87,7 +89,8 @@
     }
 
     &__bottom {
-        padding: 1.5rem;
-        background-color: $color-primary-dark;//lighten($color: $color-primary-dark, $amount: 3);
+        margin-top: 3rem;
+        padding: 2.5rem 0;
+        background-color: lighten($color: $color-black, $amount: 4);//lighten($color: $color-primary-dark, $amount: 3);
     }
 }

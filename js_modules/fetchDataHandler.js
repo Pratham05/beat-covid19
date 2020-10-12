@@ -15,7 +15,6 @@ const getCommaSeperatedString = (num) => {
     str = num.toString();
     let stringArray = str.split('');
     let i = stringArray.length - 1;
-    console.log("Bahr", stringArray);
     if (i > 2) {
         i -= 2;
         while (i > 0) {

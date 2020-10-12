@@ -23,15 +23,21 @@ const addCountries = _ =>{
 
 module.exports = addCountries;
 },{}],2:[function(require,module,exports){
-// Scroll Effects
+/** 
+  * @desc This module adds in effects for the website
+  * 2 effects are added - ScrollEffect for Navigation scroll
+  * and Changing text on Hero component
+*/
 
-const navigation = document.querySelector(".navigation");
 
+/** 
+  * @desc Adds in the navigation scroll effect
+*/
 const scrollEffectHandler = _ => {
+    const navigation = document.querySelector(".navigation");
     let lastScrollTop = window.pageYOffset;
-    
     window.onscroll = _ => {
-        if (window.pageYOffset > 0.98* window.innerHeight) {
+        if (window.pageYOffset > 0.20* window.innerHeight) {
             let scrollTop = window.pageYOffset;
             // navigation__inactive has css code for hiding the navigation bar
             if (scrollTop > lastScrollTop) {
@@ -47,28 +53,34 @@ const scrollEffectHandler = _ => {
     };     
 };
 
+/** 
+  * @desc Adds in the Change of text on hero component
+*/
 const changingTextEffectHandler = _ => {
     const phrases = ["<div>Wear a <span>Mask</span></div>", 
                         "<div>Stay at <span>Home</span></div>", "<div>Wash <span>Hands</span></div>",];
     const textHolder = document.querySelector(".heading-primary__changing-text");
-    let index = 0, pos = 100;
-    textHolder.innerHTML = phrases[index];
-    textHolder.style.top = pos/10 + 'rem';
+    let index = 0;
+    textHolder.insertAdjacentHTML("afterbegin", phrases[index]);
     setInterval(_ => {
-        if (pos > -90) {
-            textHolder.style.top = pos/10 + 'rem';
-            pos--;
-        } else {
-            pos = 100;
-            index++;
-            if (index === phrases.length) index = 0;
+        let timer = setInterval(_ => {
             textHolder.firstChild.remove();
             textHolder.insertAdjacentHTML("afterbegin", phrases[index]);
+            textHolder.classList.remove("u-inactive");
+            clearInterval(timer);
+            timer = null;
+        }, 400);
+        
+        textHolder.classList.add("u-inactive");
+        index += 1;
+        if (index === phrases.length) {
+            index = 0;
         }
-    }, 20);
+    }, 3000);
 };
 
-module.exports = changingTextEffectHandler;
+exports.changingTextEffectHandler = changingTextEffectHandler;
+exports.scrollEffectHandler = scrollEffectHandler;
 },{}],3:[function(require,module,exports){
 /** 
   * @desc This module is used to get data from covid API
@@ -87,7 +99,6 @@ const getCommaSeperatedString = (num) => {
     str = num.toString();
     let stringArray = str.split('');
     let i = stringArray.length - 1;
-    console.log("Bahr", stringArray);
     if (i > 2) {
         i -= 2;
         while (i > 0) {
@@ -201,13 +212,18 @@ module.exports = fetchDataHandler;
 // Import Statements
 const modalHandler = require("./modalHandler");
 const addCountries = require("./countryOptionHandler");
-const scrollEffectHandler = require("./effectsHandler");
+const scrollEffectHandler = require("./effectsHandler").scrollEffectHandler;
+const changingTextEffectHandler = require("./effectsHandler").changingTextEffectHandler;
 const updateData = require("./fetchDataHandler");
 
 // Add Modal Handler 
 modalHandler();
 
+// Add Scroll Handler
 scrollEffectHandler();
+
+// Add Changing Text Handler
+changingTextEffectHandler();
 
 // Add Countries to option list
 addCountries();

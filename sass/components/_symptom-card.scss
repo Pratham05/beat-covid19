@@ -1,0 +1,93 @@
+.symptom-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: $color-white;
+    height: 30vh;
+    text-align: center;
+    width: 100%;
+    border-radius: .3rem;
+    box-shadow: 0 2rem 2rem rgba($color-black, $alpha: .3);
+    transition: transform .3s;
+    //padding-top: 2.5rem;
+    position: relative;
+
+    &__icon {
+        display: inline-block;
+        margin: 3rem 0;
+        font-size: 8rem;
+        //font-weight: 700;
+        color: $color-black;
+    }
+
+    &__upper-section {
+        height: 25vh;
+        transition: all .5s ease-in-out;
+    }
+
+    &__lower-section {
+        text-transform: uppercase;
+        padding: 1rem 1rem;
+        color: $color-white;
+        //letter-spacing: .2rem;
+        background-color: $color-primary-dark;
+        //background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+        transition: all .5s ease-in-out;
+        height: 5rem;
+
+        &--information {
+            //display: inline-block;
+            text-transform: none;
+            margin-top: 1.5rem;
+            color: $color-white;
+            font-size: 1.3rem;
+            font-weight: 400;
+            //opacity: 0;
+            overflow: hidden;
+            height: 0;
+            //transition: visibility .2s opacity 1s;
+            //-webkit-transition: opacity 0ms cubic-bezier(.94,.01,1,.58);
+            transition: height .5s ease-out;
+        }
+    }
+
+    &:hover &__lower-section--information {
+        height: 25vh;
+        //opacity: 1;
+        //visibility: visible;
+        //color: $color-white;
+        //height: 25vh;
+        //-webkit-transition: opacity 0ms cubic-bezier(.94,.01,1,.58);
+        transition: height .5s ease-in;
+        
+    }
+
+    &:hover &__upper-section {
+        height: 0;
+        visibility: hidden;
+    }
+
+    &:hover &__lower-section {
+        height: 30vh;
+    }
+
+    
+
+    // &:hover {
+    //     transform: translateY(-1.5rem) scale(1.03);
+    //     display: block;
+
+    //     .card-2__upper-section {
+    //         visibility: hidden;
+    //         opacity: 0;
+    //         display: none;
+    //     }
+
+    //     .card-2__lower-section {
+    //           //height: 10rem;
+    //     //    width: 100%;
+    //     }
+    // }
+}
+

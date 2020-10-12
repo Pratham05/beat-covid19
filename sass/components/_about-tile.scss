@@ -1,10 +1,11 @@
-.tile {
+.about-tile {
     background-color: $color-white;
     padding: 1rem;
     border-radius: .5rem;
     box-shadow: 1rem 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
     text-align: justify;
     transition: transform .3s ease-in-out;
+    font-weight: 400;
 
     &:not(:last-child) {
         margin-bottom: 2rem;

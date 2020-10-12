@@ -21,6 +21,7 @@
             -webkit-background-clip: text;
             color: transparent;
         }
+        color: $color-white;
     }
 
     &__text {
@@ -38,6 +39,6 @@
     }
 
     &__btn {
-        margin-top: 5rem;
+        margin: 5rem 0 2.5rem 0;
     }
 }
