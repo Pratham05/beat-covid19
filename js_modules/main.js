@@ -12,10 +12,11 @@ const updateData = require("./fetchDataHandler");
 // Add Modal Handler 
 modalHandler();
 
+scrollEffectHandler();
+
 // Add Countries to option list
 addCountries();
 
-scrollEffectHandler();
-
-console.log(updateData());
+// Get and Update the country data
+updateData();
 

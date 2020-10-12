@@ -3,15 +3,21 @@
   * @desc This module is used to add the list of all countries into the DOM
 */
 
+// List of all the world countries 
 const country_list = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
 
 const addCountries = _ =>{
     const menu = document.getElementById('countries');
     let option = null;
     country_list.forEach(country => {
+      // This is because australia has already been added as default
+      if (country !== "Australia") {
         option = document.createElement("option");
+        // Done to clean the data in th array
+        country = country.replace("&amp;", "and");
         option.text = country;
         menu.add(option);
+      }
     });
 };
 
@@ -64,48 +70,128 @@ const changingTextEffectHandler = _ => {
 
 module.exports = changingTextEffectHandler;
 },{}],3:[function(require,module,exports){
-let dataLoaded = false;
+/** 
+  * @desc This module is used to get data from covid API
+  * and update the correesponding values in DOM
+  * 
+  * API used - https://documenter.getpostman.com/view/10808728/SzS8rjbc
+*/
 
-const getOverallData = _ => {
+/** 
+  * @desc Converts a number to a comma seperated string 
+  * according to the number format for DOM display
+  * eg. 1134567 is converted to 1,134,567
+*/
+const getCommaSeperatedString = (num) => {
+    // convert to string 
+    str = num.toString();
+    let stringArray = str.split('');
+    let i = stringArray.length - 1;
+    console.log("Bahr", stringArray);
+    if (i > 2) {
+        i -= 2;
+        while (i > 0) {
+            stringArray.splice(i, 0, ',');
+            i -= 3;
+        }
+    } 
+    return stringArray.join('');
+};
+
+/** 
+  * @desc used to set data on the DOM for the world report
+  * @param data - the total data object obtained from the API
+*/
+const setWorldData = (data) => {
+    data = data.Global;
+    const totalCases = data.TotalConfirmed;
+    const deaths = data.TotalDeaths;
+    const recovered = data.TotalRecovered;
+    const active = totalCases - recovered;
+    //update DOM
+    document.getElementById('total__cases').textContent = getCommaSeperatedString(totalCases);
+    document.getElementById('recovered__cases').textContent = getCommaSeperatedString(recovered);
+    document.getElementById('total__deaths').textContent = getCommaSeperatedString(deaths);
+    document.getElementById('active__cases').textContent = getCommaSeperatedString(active);
+};
+
+/** 
+  * @desc used to set data on the DOM for the individual country report
+  * @param data - the total data object obtained from the API
+*/
+const setCountryData = (data) => {
+    const countryElement = document.getElementById('countries');
+    const country = countryElement.options[countryElement.selectedIndex].textContent;
+    let totalCases = 0;
+    let deaths = 0;
+    let recovered = 0;
+    let active = 0;
+    for (countryData of data.Countries) {
+        if (countryData.Country === country) {
+            totalCases = countryData.TotalConfirmed;
+            deaths = countryData.TotalDeaths;
+            recovered = countryData.TotalRecovered;
+            active = totalCases - recovered;
+            break;
+        }
+    }
+    //update DOM
+    document.getElementById('country__total__cases').textContent = getCommaSeperatedString(totalCases);
+    document.getElementById('country__recovered__cases').textContent = getCommaSeperatedString(recovered);
+    document.getElementById('country__total__deaths').textContent = getCommaSeperatedString(deaths);
+    document.getElementById('country__active__cases').textContent = getCommaSeperatedString(active);
+};
+
+/** 
+  * @desc used to remove loader and make country and world data visible
+*/
+const removeLoader = _ => {
+    document.querySelector('.section-world-report__loader').remove();
+    document.getElementById('world-data-report').classList.remove('u-inactive');
+};
+
+/** 
+  * @desc used to display error message in case the API server doesnt return data
+*/
+const displayError = _ => {
+    let errorSection = document.querySelector('.section-world-report__loader');
+    errorSection.classList.add('section-world-report__error');
+    errorSection.textContent = "Could not get data from the server. Please refresh the website to try again..";
+};
+
+/** 
+  * @desc used to add event listener on the drop down of countries
+  * @param data - the total data object obtained from the API
+*/
+const addCountryListener = (data) => {
+    document.getElementById('countries').addEventListener("change", event => {
+        setCountryData(data);
+    });
+};
+
+/** 
+  * @desc used to create a request and to the API
+  * and then watch for promise to return data or an error message
+*/
+const fetchDataHandler = _ => {
     const fetchData = fetch("https://api.covid19api.com/summary");
 
     // Handle on success
     fetchData.then(response => {
         return response.json();
     }).then(data => {
-        dataLoaded = true;
-        data = data.Global;
-        const totalCases = data.TotalConfirmed;
-        const deaths = data.TotalDeaths;
-        const recovered = data.TotalRecovered;
-        const active = totalCases - recovered;
-        document.getElementById('total__cases').textContent = totalCases;
-        document.getElementById('recovered__cases').textContent = recovered;
-        document.getElementById('total__deaths').textContent = deaths;
-        document.getElementById('active__cases').textContent = active;
-        document.querySelector('.section-world-report__loader').remove();
-        document.getElementById('world-data-report').classList.remove('u-inactive');
+        setWorldData(data);
+        setCountryData(data);
+        addCountryListener(data);
+        removeLoader();
     });
 
     fetchData.catch(error => {
-        let errorSection = document.querySelector('.section-world-report__loader');
-        errorSection.classList.add('section-world-report__error');
-        errorSection.textContent = "Could not get data from the server. Please refresh the website to try again..";
+        displayError();
     });
 };
 
-const getCountryData = _ => {
-    e = document.getElementById('countries');
-    console.log(e.options[e.selectedIndex].textContent);
-};
-
-document.getElementById('countries').addEventListener("change", event => {
-    
-});
-
-
-
-module.exports = getOverallData;
+module.exports = fetchDataHandler;
 },{}],4:[function(require,module,exports){
 /** 
   * @desc This module imports functionalities from other modules
@@ -121,12 +207,13 @@ const updateData = require("./fetchDataHandler");
 // Add Modal Handler 
 modalHandler();
 
+scrollEffectHandler();
+
 // Add Countries to option list
 addCountries();
 
-scrollEffectHandler();
-
-console.log(updateData());
+// Get and Update the country data
+updateData();
 
 
 },{"./countryOptionHandler":1,"./effectsHandler":2,"./fetchDataHandler":3,"./modalHandler":5}],5:[function(require,module,exports){
