@@ -64,6 +64,13 @@
         background-color: $color-primary;
         padding: 1.5rem 4rem;
         border-radius: 10rem;
+        @include respond(tab-land) {
+            font-size: 1.3rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+        }
     }
 
     &--primary:hover {

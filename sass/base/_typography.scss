@@ -8,7 +8,7 @@ body {
     font-weight: 300;
     font-size: 1.6rem;
     line-height: 1.5;
-    color: $color-text-primary;
+    color: $color-black;
 
     @include respond(phone) { // width < 600
         font-size: 1.2rem;
@@ -19,7 +19,7 @@ body {
     font-size: 8rem;
     color: $color-black;
     line-height: 1;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 2rem;  
 
     @include respond(tab-land) { // width < 1200
@@ -38,7 +38,6 @@ body {
         animation: moveInBottom .6s ease-out .8s;
         //Applies the animation 0% value before beginning forwards does the opposite
         animation-fill-mode: backwards; 
-        //transition: all .2s ease-in-out;
     }
 
     &__changing-text {
@@ -57,7 +56,7 @@ body {
     &__paragraph {
         font-size: 1.4rem;
         font-weight: 300;
-        color: $color-black;
+        color: rgba($color: $color-black, $alpha: .8);
         margin-top: 4rem;
         animation: moveInBottom .4s ease-out 2s;
         animation-fill-mode: backwards;
@@ -102,7 +101,7 @@ body {
 }
 
 .heading-tertiary {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3rem;
     letter-spacing: .2rem;
 

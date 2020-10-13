@@ -42,6 +42,10 @@
         transition: all .5s ease-in-out;
         height: 5rem;
 
+        @include respond(tab-land) { //< 1200px
+            font-size: 1.5rem;
+        }
+
         &--information {
             text-transform: none;
             margin-top: 1.5rem;

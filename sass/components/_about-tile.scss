@@ -9,7 +9,7 @@
     box-shadow: 1rem 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
     text-align: justify;
     transition: transform .3s ease-in-out;
-    font-weight: 400;
+    font-weight: 300;
 
     &:not(:last-child) {
         margin-bottom: 2rem;
@@ -17,6 +17,6 @@
 
     &:hover {
         transform: translateY(-.5rem) scale(1.03);
-        font-weight: 500;
+        font-weight: 400;
     }
 }

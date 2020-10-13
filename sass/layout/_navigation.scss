@@ -139,7 +139,7 @@
     }
 
     &__menu-btn:checked ~ &__list {
-        height: 38rem;
+        height: 44rem;
     }
 
     @include respond(tab-port) { // < 900px
@@ -159,13 +159,17 @@
 
 
         &__link {
+            font-size: 2.5rem;
+            font-weight: 400;
             width: 100%;
             padding: .5rem;
             border-bottom: 0;
+            color: rgba($color: $color-black, $alpha: .8);
         }
 
         &__link:hover {
             border-bottom: 0;
+            color: rgba($color: $color-black, $alpha: 1);
             background-color: darken($color: $color-white, $amount: 5);
         }
     }

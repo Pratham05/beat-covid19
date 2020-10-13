@@ -2,11 +2,21 @@
 //////// This is the component is used for a card for the how to beat section
 //////////////////////////////////////////////////////////////////////////////////////////
 .card {
-    display: block;
-    height: auto;
+    @include center-content;
+    justify-content: space-between;
+    height: 50rem;
     background-color: rgba($color-white, $alpha: .6);
     padding: 2rem;
     width: 85%;
+
+    @include respond(tab-port) { // < 900px
+        width: 75%;
+        height: 40rem;
+    }
+
+    @include respond(phone) { // < 600px
+        height: 48rem;
+    }
     margin: 0 auto;
     font-size: 1.6rem;
     border-radius: .3rem;
@@ -18,13 +28,15 @@
         display: inline-block;
         color: $color-primary-dark;
         z-index: 2;
-        @supports(-webkit-background-clip: text) {
-            background-image: linear-gradient(to right, $color-primary-dark, $color-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        color: $color-white;
+        margin-top: 2rem;
+        // Does not work on Safari 
+        // @supports(-webkit-background-clip: text) {
+        //     background-image: linear-gradient(to right, $color-primary-dark, $color-primary);
+        //     background-clip: text;
+        //     -webkit-background-clip: text;
+        //     color: transparent;
+        // }
+        color: $color-primary-dark;
     }
 
     &__text {

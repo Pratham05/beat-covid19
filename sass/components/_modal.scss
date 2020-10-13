@@ -47,6 +47,21 @@
 
     &__video {
         margin-top: 2rem;
+        
+        iframe {
+            width: 75vw;
+            height: 50vh;
+
+            @include respond(tab-port) {
+                width: 75vw;
+                height: 30vh;
+            }
+
+            @include respond(phone) {
+                width: 70vw;
+                height: 25vh;
+            }
+        }
     }
 
     &__close {
