@@ -20,6 +20,10 @@
         font-size: 3rem;
         border-bottom: .3rem solid rgba($color-primary, .3);
         font-weight: 500;
+
+        @include respond(tab-port) {
+            font-size: 2.5rem;
+        }
     }
 
     &--redirect--black:hover,
@@ -49,6 +53,10 @@
         font-size: 3rem;
         border-bottom: .3rem solid rgba($color-black, .5);
         font-weight: 500;
+
+        @include respond(tab-port) {
+            font-size: 2.5rem;
+        }
     }
 
     &--redirect--white:hover,

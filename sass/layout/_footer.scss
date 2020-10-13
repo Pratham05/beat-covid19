@@ -8,33 +8,73 @@
     padding-top: 5rem;
     font-weight: 300;
 
+    &__row {
+        justify-content: space-between;
+        @include respond(tab-port) {
+            display: flex;
+            flex-direction: column;
+
+            &--1 {
+                order: 1;
+            }
+
+            &--2 {
+                order: 3;
+            }
+
+            &--3 {
+                order: 2;
+            }
+        }
+    }
+
+
     &__info {
-        border-right: 2px solid  lighten($color: $color-black, $amount: 4);
+        @include center-content;
         border-left: 2px solid  lighten($color: $color-black, $amount: 4);
-        padding-left: 9rem;
+        border-right: 2px solid  lighten($color: $color-black, $amount: 4);
+        padding: 0 5rem;
 
         @include respond(tab-land) {
-            padding-left: 4.5rem;
+            padding: 0 3rem;
         }
 
-        @include respond(tab-port) { // width < 900
-           border: none;
-           padding-left: 32vw;
+        @include respond(tab-port) {
+            border: 0;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
         }
 
-        @include respond(phone) { // width < 600
-            padding-left: 20vw;
-         }
+        &--1,
+        &--2 {
+            margin-bottom: 3rem;
+            width: 25rem;
+            @include respond(tab-port) {
+                text-align: center;
+                padding: 0;
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__main {
         @include respond(tab-port) { // width < 900
             text-align: center;
-         }
+        }
     }
 
     &__logo--img {
+        margin-top: 4rem;
         width: 30rem;
+
+        @include respond(tab-port) { // width < 900
+            width: 50rem;
+        }
+
+        @include respond(phone) { 
+            width: 35rem;
+        }
     }
 
     &__quote {
@@ -44,10 +84,20 @@
         letter-spacing: .2rem;
         margin-top: 2rem;
 
+        @include respond(tab-port) { // width < 900
+            font-size: 3rem;
+        }
+
+        @include respond(phone) { 
+            font-size: 2.5rem;
+        }
+
         &__desc {
             font-weight: 300;
             font-size: 1.5rem;
         }
+
+        
     }
 
     &__partition {
@@ -57,14 +107,20 @@
     &__copyright {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
+
+        @include respond(tab-port) {
+            font-size: 1.8rem;
+        }
     }
 
     &__disclaimer {
         text-align: center;
         font-size: 1.2rem;
         font-weight: 300;
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
     }
-
     &__heading {
         color: $color-white;
         font-weight: 300;
@@ -80,6 +136,10 @@
         font-size: 1.4rem;
         &:not(:last-child) {
             margin-bottom: 2.5rem;
+        }
+
+        @include respond(tab-port) {
+            text-align: left;
         }
     }
 
@@ -98,7 +158,7 @@
 			border: .1rem solid $color-white;
 			border-width: .2rem .2rem 0 0;
             transform: rotate(45deg);
-            
+
         }
 
         &:hover {
@@ -114,5 +174,8 @@
         margin-top: 3rem;
         padding: 2.5rem 0;
         background-color: lighten($color: $color-black, $amount: 4);
+        @include respond(tab-port) {
+            margin-top: 0;
+        }
     }
 }

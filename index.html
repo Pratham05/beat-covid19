@@ -30,23 +30,25 @@
                 </ul>
             </nav>
         </div>
-        <div class="u-container">
-            <div class="hero">
-                <div class="hero__text">
-                    <h1 class="heading-primary heading-primary--1">
-                        Be a Hero 
-                    </h1>
-                    <h1 class="heading-primary heading-primary--2">
-                        <div class="heading-primary__changing-text"></div>
-                    </h1>
-                    <p class="paragraph heading-primary__paragraph">
-                        The outbreak of Covid-19 has thrown an unprecedented challenge to the world with countries pushed into lockdowns and their people into quarantine. Till now this virus has no vaccination. We must therefore stand together and fight the challenge.
-                    </p>
-                    <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" class="btn  btn--redirect--black hero__btn" target="blank">Learn More &rarr;</a>
+        <div class="hero__outer">
+            <div class="u-container">
+                <div class="hero">
+                    <div class="hero__text">
+                        <h1 class="heading-primary heading-primary--1">
+                            Be a Hero 
+                        </h1>
+                        <h1 class="heading-primary heading-primary--2">
+                            <div class="heading-primary__changing-text"></div>
+                        </h1>
+                        <p class="paragraph heading-primary__paragraph">
+                            The outbreak of Covid-19 has thrown an unprecedented challenge to the world with countries pushed into lockdowns and their people into quarantine. Till now this virus has no vaccination. We must therefore stand together and fight the challenge.
+                        </p>
+                        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" class="btn  btn--redirect--black hero__btn" target="blank">Learn More &rarr;</a>
+                    </div>
+                    <img class="hero__img" src="img/hero.svg" alt="hero picture" >
                 </div>
-                <img class="hero__img" src="img/hero.svg" alt="hero picture" >
             </div>
-        </div>
+        </div>    
     </header>
 
     <main class="main-content">
@@ -174,7 +176,7 @@
                 <h2 class="heading-secondary heading-secondary--white u-margin-bottom-big" >
                     Symptoms of Covid19
                 </h2>
-                <div class="row">
+                <div class="row section-symptoms__row">
                     <div class="col-1-of-4">
                         <div class="symptom-card">
                             <div class="symptom-card__upper-section">
@@ -226,7 +228,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row section-symptoms__row">
                     <div class="col-1-of-4">
                         <div class="symptom-card">
                             <div class="symptom-card__upper-section">
@@ -291,7 +293,7 @@
                 </div>
                 <div class="world-data-report u-inactive" id="world-data-report">
                     <div class="row">
-                        <div class="section-world-report__left">
+                        <div class="section-world-report__left section-world-report__left--1">
                             <div class="col-1-of-2">
                                 <img src="img/world-corona.png" alt="world coronavirus" class="section-world-report__img">
                             </div>
@@ -300,7 +302,7 @@
                             <div class="section-world-report__row">
                                 <div class="section-world-report__col">
                                     <h3 class="heading-tertiary heading-tertiary--primary">
-                                        Total Cases
+                                        Total
                                     </h3>
                                     <h2 class="section-world-report__case-desc">
                                         <span id="total__cases">%Total%</span>
@@ -328,7 +330,7 @@
     
                                 <div class="section-world-report__col">
                                     <h3 class="heading-tertiary heading-tertiary--primary">
-                                        Active Cases
+                                        Active
                                     </h3>
                                     <h2 class="section-world-report__case-desc">
                                         <span id="active__cases">%Cases%</span>
@@ -352,7 +354,7 @@
                             <div class="section-world-report__row">
                                 <div class="section-world-report__col">
                                     <h3 class="heading-tertiary heading-tertiary--primary">
-                                        Total Cases
+                                        Total
                                     </h3>
                                     <h2 class="section-world-report__case-desc">
                                         <span id="country__total__cases">%Total%</span>
@@ -380,7 +382,7 @@
     
                                 <div class="section-world-report__col">
                                     <h3 class="heading-tertiary heading-tertiary--primary">
-                                        Active Cases
+                                        Active
                                     </h3>
                                     <h2 class="section-world-report__case-desc">
                                         <span id="country__active__cases">%Cases%</span>
@@ -397,8 +399,8 @@
 
     <footer class="footer">
         <div class="u-container">
-            <div class="row">
-                <div class="col-1-of-3">  
+            <div class="row footer__row">
+                <div class="col-1-of-3 footer__row--1">  
                     <div class="footer__main">
                         <div class="footer__logo">
                             <img class="footer__logo--img" src="img/logo.png" alt="Beat Covid19">
@@ -411,36 +413,46 @@
                         </p>   
                     </div>
                 </div>
-                <div class="col-1-of-3 footer__info">
-                    <h3 class="footer__heading">Information Resources</h3>
-                    <ul class="footer__list">
-                        <li class="footer__list__item"><a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert?gclid=CjwKCAjwlID8BRAFEiwAnUoK1VJ0mG7R4zIgcw7By7KLcLfRGJgTON-IbCK0q8axKdFXAsAUgibPQRoC8TAQAvD_BwE" target="blank">Australian Govt. Health Alert</a></li>
-                        <li class="footer__list__item"><a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="blank">WHO</a></li>
-                        <li class="footer__list__item"><a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" target="blank">CDC</a></li>
-                        <li class="footer__list__item"><a href="https://documenter.getpostman.com/view/10808728/SzS8rjbc" target="blank">Data API</a></li>
-                    </ul>
-    
-                    <h3 class="footer__heading">Asset Resources</h3>
-                    <ul class="footer__list">
-                        <li class="footer__list__item"><a href="https://www.flaticon.com/" target="blank">Flaticon</a></li>
-                        <li class="footer__list__item"><a href="https://www.freepik.com/" target="blank">FreePik</a></li>
-                    </ul>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="author">
-                        <figure class="author__shape">
-                            &nbsp;
-                        </figure>
-                        <h3 class="author__heading">
-                            Pratham Bathla
-                        </h3>
-                        <p class="author__desc">Full Stack Developer</p>
-                        <div class="author__icons">
-                            <a href="https://github.com/Pratham05/" target="blank"><i class="icon-github-logo author__icons--1"></i></a> 
-                            <a href="https://www.linkedin.com/in/pratham-bathla" target="blank"><i class="icon-linkedin author__icons--2"></i></a> 
+                <div class="col-1-of-3 footer__row--2">
+                    <div class="footer__info">
+                        <div class="footer__info--1">
+                            <h3 class="footer__heading">Information</h3>
+                            <ul class="footer__list footer__list--1">
+                                <li class="footer__list__item"><a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert?gclid=CjwKCAjwlID8BRAFEiwAnUoK1VJ0mG7R4zIgcw7By7KLcLfRGJgTON-IbCK0q8axKdFXAsAUgibPQRoC8TAQAvD_BwE" target="blank">Australian Govt</a></li>
+                                <li class="footer__list__item"><a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="blank">WHO</a></li>
+                                <li class="footer__list__item"><a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" target="blank">CDC</a></li>
+                                <li class="footer__list__item"><a href="https://documenter.getpostman.com/view/10808728/SzS8rjbc" target="blank">Data API</a></li>
+                            </ul>
                         </div>
-                        <p class="footer__copyright">Pratham Bathla &copy; 2020, Code License - MIT</p>
+
+                        <div class="footer__info--2">
+                            <h3 class="footer__heading">Assets</h3>
+                            <ul class="footer__list footer__list--2">
+                                <li class="footer__list__item"><a href="https://www.flaticon.com/" target="blank">Flaticon</a></li>
+                                <li class="footer__list__item"><a href="https://www.freepik.com/" target="blank">FreePik</a></li>
+                            </ul>
+                        </div>
+                    
+                    </div> 
+                </div>
+                <div class="col-1-of-3 footer__row--3">
+                    <div class="footer__author">
+                        <div class="author">
+                            <figure class="author__shape">
+                                &nbsp;
+                            </figure>
+                            <h3 class="author__heading">
+                                Pratham Bathla
+                            </h3>
+                            <p class="author__desc">Full Stack Developer</p>
+                            <div class="author__icons">
+                                <a href="https://github.com/Pratham05/" target="blank"><i class="icon-github-logo author__icons--1"></i></a> 
+                                <a href="https://www.linkedin.com/in/pratham-bathla" target="blank"><i class="icon-linkedin author__icons--2"></i></a> 
+                            </div>
+                            <p class="footer__copyright">Pratham Bathla &copy; 2020, Code License - MIT</p>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
             
