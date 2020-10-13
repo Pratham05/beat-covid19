@@ -12,17 +12,24 @@ const scrollEffectHandler = _ => {
     const navigation = document.querySelector(".navigation");
     let lastScrollTop = window.pageYOffset;
     window.onscroll = _ => {
-        if (window.pageYOffset > 0.20* window.innerHeight) {
-            let scrollTop = window.pageYOffset;
-            // navigation__inactive has css code for hiding the navigation bar
-            if (scrollTop > lastScrollTop) {
-                navigation.classList.add('navigation__inactive'); 
+        // The scroll effect should not work on screen sizes less than 900
+        // to support responsive design
+        if (window.innerWidth > 900) {
+            if (window.pageYOffset > 0.20* window.innerHeight) {
+                let scrollTop = window.pageYOffset;
+                // navigation__inactive has css code for hiding the navigation bar
+                if (scrollTop > lastScrollTop) {
+                    navigation.classList.add('navigation__inactive'); 
+                } else {
+                    navigation.classList.remove('navigation__inactive');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             } else {
+                // Added for a possible scenario where scroll was near 98vh and was very fast
                 navigation.classList.remove('navigation__inactive');
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         } else {
-            // Added for a possible scenario where scroll was near 98vh and was very fast
+            // Make visible in case window resized when invisible
             navigation.classList.remove('navigation__inactive');
         }
     };     

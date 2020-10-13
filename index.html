@@ -18,7 +18,10 @@
                         <img class="navigation__logo--img" src="img/logo.png" alt="Beat Covid19">
                     </a>
                 </div>
-    
+
+                <input type="checkbox" id="navigation__menu-btn" class="navigation__menu-btn">
+                <label for="navigation__menu-btn" class="navigation__menu-icon">
+                    <span class="hamburger-icon"></span></label>
                 <ul class="navigation__list">
                     <li class="navigation__item"><a href="#section-how" class="navigation__link">How ?</a></li>
                     <li class="navigation__item"><a href="#section-about" class="navigation__link">About Covid</a></li>
@@ -48,13 +51,13 @@
 
     <main class="main-content">
         <section class="section-how" id="section-how">
-            <h2 class="heading-secondary heading-secondary--white">
-                How to Beat Covid?
-            </h2>
-            <p class="paragraph section-how__praragraph">
-                The best way till now to fight Covid-19 is to avoid being exposed to the virus
-            </p>
             <div class="u-container">
+                <h2 class="heading-secondary heading-secondary--white">
+                    How to Beat Covid?
+                </h2>
+                <p class="paragraph section-how__praragraph">
+                    The best way till now to fight Covid-19 is to avoid being exposed to the virus
+                </p>
                 <div class="row u-margin-top-big">
                     <div class="col-1-of-3">
                         <div class="card">
@@ -167,12 +170,10 @@
         </section>
 
         <section class="section-symptoms" id="section-symptoms">
-
-            <h2 class="heading-secondary heading-secondary--white">
-                Symptoms of Covid19
-            </h2>
-
             <div class="u-container">
+                <h2 class="heading-secondary heading-secondary--white">
+                    Symptoms of Covid19
+                </h2>
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="symptom-card">
@@ -461,6 +462,8 @@
             <a href="#section-how" class="modal__close">&times;</a>
         </div> 
     </div>
+
+    <div class="backdrop u-inactive">&nbsp;</div>
 
     <script src="js/bundle.js"></script>
 </body>

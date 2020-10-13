@@ -12,42 +12,42 @@
 .u-margin-top-big {
     margin-top: 8rem;
     @include respond(phone) { // width < 600
-        margin-top: 4rem;
+        margin-top: 0;
     }
 }
 
 .u-margin-top-medium {
     margin-top: 5rem;
     @include respond(phone) { // width < 600
-        margin-top: 2rem;
+        margin-top: 0;
     }
 }
 
 .u-margin-top-small {
     margin-top: 3rem;
     @include respond(phone) { // width < 600
-        margin-top: 1rem;
+        margin-top: 0;
     }
 }
 
 .u-margin-bottom-big {
     margin-top: 8rem;
     @include respond(phone) { // width < 600
-        margin-top: 4rem;
+        margin-bottom: 0;
     }
 }
 
 .u-margin-bottom-medium {
     margin-top: 5rem;
     @include respond(phone) { // width < 600
-        margin-top: 2rem;
+        margin-bottom: 0;
     }
 }
 
 .u-margin-bottom-small {
     margin-top: 3rem;
     @include respond(phone) { // width < 600
-        margin-top: 1rem;
+        margin-bottom: 0;
     }
 }
 

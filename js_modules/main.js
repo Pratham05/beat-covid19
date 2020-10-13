@@ -9,6 +9,7 @@ const addCountries = require("./countryOptionHandler");
 const scrollEffectHandler = require("./effectsHandler").scrollEffectHandler;
 const changingTextEffectHandler = require("./effectsHandler").changingTextEffectHandler;
 const updateData = require("./fetchDataHandler");
+const responsiveHandler = require("./responsiveHandler");
 
 // Add Modal Handler 
 modalHandler();
@@ -24,4 +25,7 @@ addCountries();
 
 // Get and Update the country data
 updateData();
+
+// Add responsive Handler
+responsiveHandler();
 

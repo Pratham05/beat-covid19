@@ -37,17 +37,24 @@ const scrollEffectHandler = _ => {
     const navigation = document.querySelector(".navigation");
     let lastScrollTop = window.pageYOffset;
     window.onscroll = _ => {
-        if (window.pageYOffset > 0.20* window.innerHeight) {
-            let scrollTop = window.pageYOffset;
-            // navigation__inactive has css code for hiding the navigation bar
-            if (scrollTop > lastScrollTop) {
-                navigation.classList.add('navigation__inactive'); 
+        // The scroll effect should not work on screen sizes less than 900
+        // to support responsive design
+        if (window.innerWidth > 900) {
+            if (window.pageYOffset > 0.20* window.innerHeight) {
+                let scrollTop = window.pageYOffset;
+                // navigation__inactive has css code for hiding the navigation bar
+                if (scrollTop > lastScrollTop) {
+                    navigation.classList.add('navigation__inactive'); 
+                } else {
+                    navigation.classList.remove('navigation__inactive');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             } else {
+                // Added for a possible scenario where scroll was near 98vh and was very fast
                 navigation.classList.remove('navigation__inactive');
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         } else {
-            // Added for a possible scenario where scroll was near 98vh and was very fast
+            // Make visible in case window resized when invisible
             navigation.classList.remove('navigation__inactive');
         }
     };     
@@ -215,6 +222,7 @@ const addCountries = require("./countryOptionHandler");
 const scrollEffectHandler = require("./effectsHandler").scrollEffectHandler;
 const changingTextEffectHandler = require("./effectsHandler").changingTextEffectHandler;
 const updateData = require("./fetchDataHandler");
+const responsiveHandler = require("./responsiveHandler");
 
 // Add Modal Handler 
 modalHandler();
@@ -231,8 +239,11 @@ addCountries();
 // Get and Update the country data
 updateData();
 
+// Add responsive Handler
+responsiveHandler();
 
-},{"./countryOptionHandler":1,"./effectsHandler":2,"./fetchDataHandler":3,"./modalHandler":5}],5:[function(require,module,exports){
+
+},{"./countryOptionHandler":1,"./effectsHandler":2,"./fetchDataHandler":3,"./modalHandler":5,"./responsiveHandler":6}],5:[function(require,module,exports){
 /** 
   * @desc This module handles the opening and closing of the modal
   * When the modal is opened video cooresponding to the button is inserted
@@ -290,4 +301,62 @@ const modalHandler = () => {
 
 module.exports = modalHandler;
 
+},{}],6:[function(require,module,exports){
+/** 
+  * @desc This module adds in event listenrs for responsive navigation menu
+  * 1. Close menu on size increase more than 900px
+  * 2. Show and hide backdrop on menu closing and opening
+  * 3. Close menu and backdrop on backdrop click
+*/
+
+/** 
+  * @desc Close menu by unchecking checkbox and giving inactive class to backdrop
+*/
+const closeMenu = _ => {
+    // Close hamburger Menu
+    document.querySelector('#navigation__menu-btn').checked = false;
+    // Close BackDrop
+    document.querySelector(".backdrop").classList.add("u-inactive");
+};
+
+/** 
+  * @desc Adds listener on window size change for menu closing
+*/
+const addResizingListener = _ => {
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+            closeMenu();
+        }
+    });
+};
+
+
+/** 
+  * @desc Adds backdrop listeners
+*/
+const addBackdroplListeners = _ => {
+    // Appearing and Disappearing
+    document.querySelector('#navigation__menu-btn').addEventListener("change", (event) => {
+        document.querySelector(".backdrop").classList.toggle("u-inactive");
+    });
+
+    // Close menu on backdrop click
+    document.querySelector('.backdrop').addEventListener("click", _ => {
+        closeMenu();
+    });
+};
+
+
+/** 
+  * @desc Main function 
+  * calss other listener adders and is exported for the main js
+*/
+const responsiveHandler = _ => {
+    // close menu on resizing
+    addResizingListener();
+    // Backdrop Manipulation
+    addBackdroplListeners();
+};
+
+module.exports = responsiveHandler;
 },{}]},{},[4]);

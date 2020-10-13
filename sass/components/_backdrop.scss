@@ -1,0 +1,22 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//////// Styles for the Backdrop Component
+//////// Closing on Clicking and on window size change controlled through Js responsiveHandler
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 45;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color-black, .3);
+
+    @supports(-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
+        -webkit-backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1rem);
+        background-color: rgba($color-black, .3);
+    }
+
+    transition: all .3s ease-in-out;
+}
