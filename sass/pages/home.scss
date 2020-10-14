@@ -58,9 +58,9 @@
 
 .section-how{
     background-image: linear-gradient(to right bottom,
-                                    rgba($color-primary-dark, 0.7),
-                                    rgba($color-primary, 1)),
-    url("../img/corona-bg-1.jpg");
+                                    rgba($color-primary-dark, 1),
+                                    rgba($color-primary-dark, 0.7)),
+    url("../img/corona-bg-1.svg");
     background-size: cover;
     background-position: center;
     backface-visibility: hidden;
