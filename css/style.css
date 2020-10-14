@@ -460,7 +460,7 @@ body {
     text-transform: uppercase;
     padding: 1rem 1rem;
     color: #ffffff;
-    background-color: #006D70;
+    background-image: linear-gradient(to right bottom, rgba(0, 182, 188, 0.8), #006d70);
     transition: all .5s ease-in-out;
     height: 5rem; }
     @media only screen and (max-width: 75em) {

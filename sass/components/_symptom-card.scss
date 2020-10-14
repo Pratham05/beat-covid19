@@ -41,7 +41,10 @@
         text-transform: uppercase;
         padding: 1rem 1rem;
         color: $color-white;
-        background-color: $color-primary-dark;
+        //background-color: $color-primary-dark;
+        background-image: linear-gradient(to right bottom,
+                            rgba($color-primary, .8),
+                            rgba($color-primary-dark, 1));
         transition: all .5s ease-in-out;
         height: 5rem;
 
