@@ -77,7 +77,7 @@
             width: 20rem;
 
             @include respond(phone) { // < 600px
-                width: 15rem;
+                width: 25rem;
             }
         }
     }

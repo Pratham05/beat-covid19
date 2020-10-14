@@ -656,7 +656,7 @@ body {
     width: 20rem; }
     @media only screen and (max-width: 37.5em) {
       .navigation__logo--img {
-        width: 15rem; } }
+        width: 25rem; } }
   .navigation__list {
     display: flex;
     list-style: none;
