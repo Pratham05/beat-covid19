@@ -38,10 +38,13 @@ body {
     }
 
     &--1 {
+        line-height: 1.5;
         animation: moveInLeft .8s;
     }
 
     &--2 {
+        // margin-top: rem;
+        line-height: 1.5;
         animation: moveInBottom .6s ease-out .8s;
         //Applies the animation 0% value before beginning forwards does the opposite
         animation-fill-mode: backwards; 
@@ -75,6 +78,7 @@ body {
 
         @include respond(tab-port) { // width < 900
             color: $color-black;
+            font-size: 1.8;
         }
     }
 

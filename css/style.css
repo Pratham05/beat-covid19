@@ -60,8 +60,10 @@ body {
     .heading-primary {
       font-size: 5rem; } }
   .heading-primary--1 {
+    line-height: 1.5;
     animation: moveInLeft .8s; }
   .heading-primary--2 {
+    line-height: 1.5;
     animation: moveInBottom .6s ease-out .8s;
     animation-fill-mode: backwards; }
   .heading-primary__changing-text {
@@ -89,7 +91,8 @@ body {
     padding-right: 5rem; }
     @media only screen and (max-width: 56.25em) {
       .heading-primary__paragraph {
-        color: #373A40; } }
+        color: #373A40;
+        font-size: 1.8; } }
   .heading-primary span {
     display: inline-block;
     color: #ffffff;
@@ -903,7 +906,7 @@ body {
     animation-fill-mode: backwards; }
 
 .section-how {
-  background-image: linear-gradient(to right bottom, #006d70, rgba(0, 109, 112, 0.7)), url("../img/corona-bg-1.svg");
+  background-image: linear-gradient(to right bottom, #006d70, rgba(0, 109, 112, 0.7)), url("../img/corona-bg-1.jpg");
   background-size: cover;
   background-position: center;
   backface-visibility: hidden;
