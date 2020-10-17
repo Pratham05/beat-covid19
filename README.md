@@ -39,5 +39,5 @@ Now the following files and folders can be deployed - index.html, fonts, img, cs
 * **Pratham Bathla** 
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Pratham05/beat-covid19/blob/master/LICENSE) file for details
 
